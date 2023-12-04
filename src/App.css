@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Noto+Sans+KR&display=swap');
+
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* font-family: 'Catamaran', sans-serif; */
+
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  
+}
+
+.wrap {
+  max-width: 689px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 19.5px;
+  padding-right: 19.5px;
+  font-weight: 300;
+  word-wrap: break-word;
+  word-break: keep-all;
+  line-height: 1.8;
+}
