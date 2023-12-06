@@ -32,7 +32,7 @@ function Profile({}: Props) {
           </PersonalLinks>
         </TitleContent>
         <p>
-          관광학을 전공했고, <span style={{ fontWeight: 'bold' }}>사람들을 도와주는 일</span>을 하고 싶어 호텔, 국내여행가이드 일했습니다.
+          관광학을 전공했고, <span style={{ fontWeight: 'bold' }}>사람들을 도와주는 일</span>을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
         </p>
         <p>
           서비스를 제공하는 것에서 이젠 <span style={{ fontWeight: 'bold' }}>좋은 서비스</span>를 만들고 싶어 개발자가 되려고 합니다.
@@ -109,7 +109,7 @@ function Profile({}: Props) {
               </ContentKey>
               <ContentValue>
                 <div>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>웹 페이지 구현</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '15px' }}>웹 페이지 구현</span>
                   <li>메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지를 제작했습니다.(60%)</li>
                   <li>
                     <span style={{}}>필터 기능 구현</span>
@@ -131,7 +131,7 @@ function Profile({}: Props) {
                     </ul>
                   </li>
 
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>성능 최적화</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '15px' }}>성능 최적화</span>
                   <li>
                     <span style={{ textDecoration: 'underline' }}>
                       <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
@@ -152,42 +152,35 @@ function Profile({}: Props) {
             </Content>
 
             <Content>
-              <ContentKey style={{ height: '341px' }}>
+              <ContentKey style={{ height: '384px' }}>
                 <h4>TroubleShooting</h4>
               </ContentKey>
               <ContentValue>
+                <span style={{ fontWeight: 'bold' }}>Infinite Scroll</span>
+                <li>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
+                <li>원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈</li>
                 <li>
-                  <span style={{ fontWeight: 'bold' }}>Infinite Scroll</span>
-                  <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                    <li>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
-                    <li>원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈</li>
-                    <li>
-                      해결: {/* 처음엔 문제의 원인을 정확히 파악하지 못하고, 코드 스플리팅에 대해 알아보던 중,  */}
-                      <span style={{ textDecoration: 'underline' }}>
-                        <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
-                          <span style={{ fontWeight: 'bold' }}>Intersection Observer </span>와 react-query 의
-                          <span style={{ fontWeight: 'bold' }}> useInfinitequery </span>를 사용해 Lazy Loading 을 구현
-                        </a>
-                      </span>
-                      하여 26000ms 의 로딩 속도를 1100ms 로 개선.
-                    </li>
-                  </ul>
+                  해결: {/* 처음엔 문제의 원인을 정확히 파악하지 못하고, 코드 스플리팅에 대해 알아보던 중,  */}
+                  <span style={{ textDecoration: 'underline' }}>
+                    <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
+                      <span style={{ fontWeight: 'bold' }}>Intersection Observer </span>와 react-query 의
+                      <span style={{ fontWeight: 'bold' }}> useInfinitequery </span>를 사용해 Lazy Loading 을 구현
+                    </a>
+                  </span>
+                  하여 26000ms 의 로딩 속도를 1100ms 로 개선.
                 </li>
+                <span style={{ fontWeight: 'bold' }}>SEO(검색 엔진 최적화)</span>
+                <li>문제: 구글 애널리틱스에서 유저유입 파악에 어려운 문제가 있었습니다.</li>
+                <li>원인: 페이지들의 title 이 모두 같아서 유저의 유입을 구분짓기가 어려웠습니다.</li>
                 <li>
-                  <span style={{ fontWeight: 'bold' }}>SEO(검색 엔진 최적화)</span>
-                  <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                    <li>문제: 구글 애널리틱스에서 유저유입 파악에 어려운 문제가 있었습니다.</li>
-                    <li>원인: 페이지들의 title 이 모두 같아서 유저의 유입을 구분짓기가 어려웠습니다.</li>
-                    <li>
-                      해결: SEO 개선 및 유저 유입 파악을 위해 <span style={{ fontWeight: 'bold' }}>react-helmet </span>으로{' '}
-                      <span style={{ textDecoration: 'underline' }}>
-                        <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
-                          페이지별 메타태그 설정 후, 구글 애널리틱스로 유저 유입 파악.
-                        </a>
-                      </span>
-                    </li>
-                  </ul>
+                  해결: SEO 개선 및 유저 유입 파악을 위해 <span style={{ fontWeight: 'bold' }}>react-helmet </span>으로{' '}
+                  <span style={{ textDecoration: 'underline' }}>
+                    <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
+                      페이지별 메타태그 설정 후, 구글 애널리틱스로 유저 유입 파악.
+                    </a>
+                  </span>
                 </li>
+
                 {/* <li>
                   <span style={{ fontWeight: 'bold' }}>React.memo, useCallback, useMemo 를 이용한 페이지 성능 최적화</span>
                   <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
@@ -207,14 +200,14 @@ function Profile({}: Props) {
                 <h5>(회고)</h5>
               </ContentKey>
               <ContentValue>
-                <div style={{ fontWeight: 'bold', fontSize: '16px' }}>소통하는 개발자</div>
+                <div style={{ fontWeight: 'bold', fontSize: '15px' }}>소통하는 개발자</div>
                 <li>
                   리더로서 프로젝트의 전반적인 진행상황을 파악하고, 팀원들이 효율적으로 소통할 수 있도록 조율하며 팀장으로서 역할을 수행했습니다. 적절한
                   마일스톤을 세우고, 이를 완수하기 위해 스탠드업 미팅을 아침, 저녁 한 번씩 가지며 효율적인 협업과 커뮤니케이션을 중요시하는 팀 문화를 형성하기
                   위해 노력했습니다. 이번을 계기로 앞으로도 책임과 신뢰를 기반으로 동료 개발자분들과 소통하고 싶은 그런 개발자의 모습을 보여줄 수 있을 것
                   같습니다.
                 </li>
-                <div style={{ fontWeight: 'bold', fontSize: '16px' }}>원인 파악하기 힘든 장애</div>
+                <div style={{ fontWeight: 'bold', fontSize: '15px' }}>원인 파악하기 힘든 장애</div>
                 <li>
                   담당했던 '무한스크롤' 기능에서 반복적인 장애가 있었습니다. 무한 스크롤 기능은 처음 사용해보는 기능이 두 가지여서 어느 한 곳에 문제가
                   일어났는지 파악하는 것부터 어려웠죠. 하지만, 아무리 살펴봐도 로직엔 문제가 없어 보였고, 이 장애로 인해 큰 스크레스를 받았습니다.{' '}
