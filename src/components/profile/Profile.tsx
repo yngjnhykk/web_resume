@@ -13,7 +13,7 @@ function Profile({}: Props) {
     <div>
       <InfoArticle>
         <TitleContent>
-          <h1>안녕하세요, 양진혁 입니다.</h1>
+          <h1>안녕하세요, 프론트엔드 양진혁 입니다.</h1>
           {/* <PersonalLinks>
             <a href='https://yngjnhyk.tistory.com' target='_blank'>
               https://yngjnhyk.tistory.com
@@ -87,15 +87,14 @@ function Profile({}: Props) {
 
             <ContentValue style={{ fontWeight: '600' }}>
               <li>HTML5, CSS3, JavaScript</li>
-              <li>React</li>
+              <li>React, Redux, styled-components, react-query</li>
               <li>Typescript</li>
-              <li>Redux, styled-components, react-query</li>
               <li>Vite</li>
             </ContentValue>
           </Content>
         </WorkExperience>
 
-        <h2>
+        <h2 style={{ marginTop: '100px' }}>
           <span>Projects Experience</span>
         </h2>
         <WorkExperience>
@@ -135,14 +134,14 @@ function Profile({}: Props) {
             </Table>
 
             <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '381px' }}>
+              <ContentKey style={{ height: '455px' }}>
                 <h4>What i did</h4>
                 <h5>(맡은 역할)</h5>
               </ContentKey>
               <ContentValue>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '15px' }}>웹 페이지 구현</span>
-                  <li>메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지를 제작.(60%)</li>
+                  <li>메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지를 제작.(페이지 제작-70%)</li>
                   <li>
                     <span style={{}}>필터 기능 구현</span>
 
@@ -162,16 +161,6 @@ function Profile({}: Props) {
                       <li>preview 를 구성하고, 삼항연산자로 각각 index 를 부여해 carousel 의 기능을 구현하고, translateX 로 슬라이드를 구현.</li>
                     </ul>
                   </li>
-
-                  <span style={{ fontWeight: 'bold', fontSize: '15px' }}>성능 최적화</span>
-                  <li>
-                    <span style={{ textDecoration: 'underline' }}>
-                      <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
-                        <span style={{ fontWeight: 'bold' }}> 코드 스플리팅</span>을 통해 번들링 사이즈 17% 줄여{' '}
-                      </a>
-                    </span>
-                    초기 로딩 속도를 개선.
-                  </li>
                   <li>
                     <span style={{ fontWeight: 'bold' }}>시멘틱 태그</span>와 <span style={{ fontWeight: 'bold' }}>aria-label </span>등을 이용해 웹 접근성 개선.
                     <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
@@ -179,18 +168,33 @@ function Profile({}: Props) {
                       <li>시멘틱 태그를 이용해 정보의 계층 구조를 명확하게 함.</li>
                     </ul>
                   </li>
+
+                  <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '20px' }}>성능 최적화</div>
+                  <li>
+                    <span style={{ textDecoration: 'underline' }}>
+                      <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
+                        <span style={{ fontWeight: 'bold' }}> 코드 스플리팅</span>을 통해 번들링 사이즈 17% 줄여{' '}
+                      </a>
+                    </span>
+                    초기 로딩 속도 개선.
+                  </li>
+
+                  <li>React.memo, useCallback, useMemo 를 이용한 불필요한 리렌더링 관리.</li>
                 </div>
               </ContentValue>
             </Content>
 
             <Content>
-              <ContentKey style={{ height: '357px' }}>
+              <ContentKey style={{ height: '317px' }}>
                 <h4>TroubleShooting</h4>
+                <h5>(문제 해결 경험)</h5>
               </ContentKey>
               <ContentValue>
                 <span style={{ fontWeight: 'bold' }}>Infinite Scroll</span>
-                <li>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
-                <li>원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈</li>
+                <li style={{ marginBottom: '0px' }}>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
+                <li style={{ marginBottom: '0px' }}>
+                  원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈
+                </li>
                 <li>
                   해결:
                   <span style={{ textDecoration: 'underline' }}>
@@ -202,8 +206,8 @@ function Profile({}: Props) {
                   하여 26000ms 의 로딩 속도를 1100ms 로 개선.
                 </li>
                 <span style={{ fontWeight: 'bold' }}>SEO(검색 엔진 최적화)</span>
-                <li>문제: 구글 애널리틱스에서 유저유입 파악에 어려운 문제.</li>
-                <li>원인: 페이지들의 title 이 모두 같아 파악하는 데 어려움 존재.</li>
+                <li style={{ marginBottom: '0px' }}>문제: 구글 애널리틱스에서 어려운 유저유입 파악</li>
+                <li style={{ marginBottom: '0px' }}>원인: 페이지들의 title 이 모두 같아 파악하는 데 어려움 존재.</li>
                 <li>
                   해결: SEO 개선 및 유저 유입 파악을 위해 <span style={{ fontWeight: 'bold' }}>react-helmet </span>으로{' '}
                   <span style={{ textDecoration: 'underline' }}>
@@ -226,29 +230,20 @@ function Profile({}: Props) {
               </ContentValue>
             </Content>
 
-            <Content>
+            {/* <Content>
               <ContentKey style={{ height: '327px' }}>
                 <h4>Review</h4>
                 <h5>(회고)</h5>
               </ContentKey>
               <ContentValue>
-                <div style={{ fontWeight: 'bold', fontSize: '15px' }}>소통하는 개발자</div>
-                <li>
-                  프로젝트 리더로서 전체 진행 상황을 파악하고, 마일스톤을 설정하여 팀의 효율적인 협업과 소통을 이끌었습니다. 앞으로도 신뢰와 책임을 바탕으로
-                  동료 개발자들과의 소통을 통해 성장하고자 합니다.
-                </li>
-                <div style={{ fontWeight: 'bold', fontSize: '15px' }}>원인 파악하기 힘든 장애</div>
-                <li>무한 스크롤 기능 도입 시 발생한 장애로 어려움을 겪었지만, 로직 검토 후 문제 파악이 어려워 두 기능을 분리하며 깊이 이해했습니다.</li>
-                <li>
-                  지속적인 트러블 슈팅과 동료 협업을 통해 메모리릭 원인을 찾아내어 성공적으로 해결함으로써 개발자로서의 능력을 향상시켰습니다.{' '}
-                  <span style={{ fontWeight: '600' }}>이런 트러블 슈팅들을 겪으면서 배운 것들이 제 스스로에게 너무 소중한 자산이 된 것 같습니다.</span>
-                </li>
+                <div style={{ fontWeight: 'bold', fontSize: '15px' }}>3L 회고</div>
+                <li>프로젝트에 대한 회고를 3L 회고법을 통해 블로그에 작성해두었습니다. </li>
               </ContentValue>
-            </Content>
+            </Content> */}
           </WorkExperienceItem>
         </WorkExperience>
 
-        <h2 style={{ marginTop: '80px' }}>
+        <h2 style={{ marginTop: '0px' }}>
           <span>Education</span>
         </h2>
         <WorkExperience>
@@ -317,7 +312,7 @@ function Profile({}: Props) {
     </div>
   );
 }
-
+// style = {{marginBottom: '0px'}}
 export default Profile;
 
 const InfoArticle = styled.div`
@@ -472,6 +467,8 @@ const ContentValue = styled.div`
   li {
     margin-left: 15px;
     margin-bottom: 10px;
+    /* list-style-position: inside; */
+    /* text-indent: -50px; */
     li {
       color: black;
       border: 1px;
