@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Logo() {
+function LowestPrice() {
   return (
-    <div>
-      <svg style={{ marginTop: '5px' }} width='36' height='36' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <div style={{ height: '18px' }}>
+      <svg width='18' height='18' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <g filter='url(#filter0_d_473_947)'>
           <g filter='url(#filter1_d_473_947)'>
             <rect x='2' y='1' width='24' height='24' rx='4.98529' fill='url(#paint0_linear_473_947)' />
@@ -81,4 +81,4 @@ function Logo() {
   );
 }
 
-export default React.memo(Logo);
+export default React.memo(LowestPrice);
