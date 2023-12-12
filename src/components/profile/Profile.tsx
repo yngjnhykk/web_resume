@@ -163,6 +163,9 @@ function Profile({}: Props) {
                     <span style={{ fontWeight: 'bold' }}>페이지 제작 기여도 70%</span> (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 제작)
                   </li>
                   <li>
+                    <span style={{ fontWeight: 'bold' }}>GitHub Actions</span>를 통한 배포 자동화 (Amazon S3)
+                  </li>
+                  <li>
                     소셜 로그인(kakao) 기능 구현(<span style={{ fontWeight: 'bold' }}>SDK</span>)
                   </li>
                   <li>
@@ -173,9 +176,7 @@ function Profile({}: Props) {
                       </a>
                     </span>
                   </li>
-                  <li>
-                    웹 페이지 드래그 (가로)스크롤 기능 구현(<span style={{ fontWeight: 'bold' }}>swiper/react</span>)
-                  </li>
+
                   <li>
                     <span style={{}}>필터 기능 구현</span>
                   </li>
