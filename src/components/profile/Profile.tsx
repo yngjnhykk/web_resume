@@ -152,7 +152,7 @@ function Profile({}: Props) {
             </Table>
 
             <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '409px' }}>
+              <ContentKey style={{ height: '441px' }}>
                 <h4>What i did</h4>
                 <h5>(맡은 역할)</h5>
               </ContentKey>
@@ -176,15 +176,21 @@ function Profile({}: Props) {
                       </a>
                     </span>
                   </li>
-
                   <li>
-                    <span style={{}}>필터 기능 구현</span>
+                    신규 유저 유입 분석을 위해 웹 어플리케이션과{' '}
+                    <a
+                      href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB'
+                      target='_blank'
+                      style={{ fontWeight: 'bold', textDecoration: 'underline' }}
+                    >
+                      Google Analytics
+                    </a>{' '}
+                    연동으로 데이터 시각화
                   </li>
+
+                  <li>상품 필터 기능 구현</li>
                   <li>
                     <span style={{ fontWeight: 'bold' }}>시멘틱 태그</span>와 <span style={{ fontWeight: 'bold' }}>aria-label </span>등을 이용해 웹 접근성 개선.
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                      <li>웹 접근성을 고려하여, 청각 장애인을 위해 aria-label 속성 사용</li>
-                    </ul>
                   </li>
 
                   <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '20px' }}>성능 최적화</div>
