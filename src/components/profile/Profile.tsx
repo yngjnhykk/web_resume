@@ -163,10 +163,16 @@ function Profile({}: Props) {
                     <span style={{ fontWeight: 'bold' }}>페이지 제작 기여도 70%</span> (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 제작)
                   </li>
                   <li>
-                    <span style={{ fontWeight: 'bold' }}>GitHub Actions</span>를 통한 배포 자동화 (Amazon S3)
+                    <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+                      GitHub Actions
+                    </a>
+                    를 통한 배포 자동화 (Amazon S3)
                   </li>
                   <li>
-                    소셜 로그인(kakao) 기능 구현(<span style={{ fontWeight: 'bold' }}>SDK</span>)
+                    <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{ textDecoration: 'underline' }}>
+                      소셜 로그인(kakao)
+                    </a>{' '}
+                    기능 구현(<span style={{ fontWeight: 'bold' }}>SDK</span>)
                   </li>
                   <li>
                     라이브러리 없이{' '}
