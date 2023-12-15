@@ -152,7 +152,7 @@ function Profile({}: Props) {
             </Table>
 
             <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '441px' }}>
+              <ContentKey style={{ height: '451px' }}>
                 <h4>What i did</h4>
                 <h5>(맡은 역할)</h5>
               </ContentKey>
@@ -282,7 +282,7 @@ function Profile({}: Props) {
                 </ul>
               </ContentValue>
             </Content>
-            <Content style={{ marginTop: '70px', marginBottom: '20px' }}>
+            <Content style={{ marginTop: '20px', marginBottom: '20px' }}>
               <ContentKey>
                 <h4>동의대학교</h4>
                 <h5 style={{ fontWeight: '500', marginTop: '10px' }}>2016.03 ~ 2021.02</h5>
