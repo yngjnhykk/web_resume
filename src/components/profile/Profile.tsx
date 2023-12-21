@@ -5,81 +5,61 @@ import LowesPrice from '../../assets/fonts/icon/LowesPrice';
 import Tistory from '../../assets/fonts/icon/Tistory';
 import Email from '../../assets/fonts/icon/Email';
 import Phone from '../../assets/fonts/icon/Phone';
+import profileImage from '../../assets/profileImage.jpg';
 
 type Props = {};
 
 function Profile({}: Props) {
-  // const userInfoList = [
-  //   { content: 'Blog | https://yngjnhyk.tistory.com/' },
-  //   { content: 'Portfolio | https://www.notion.so/93659abf7dde4df487199796cec747af' },
-  //   { content: 'Github | https://github.com/yngjnhykk' },
-  // ];
-
   return (
     <div>
       <InfoArticle>
         <TitleContent style={{ marginBottom: '30px' }}>
           <h1>안녕하세요, 프론트엔드 양진혁 입니다.</h1>
-          {/* <PersonalLinks>
-            <a href='https://yngjnhyk.tistory.com' target='_blank'>
-              https://yngjnhyk.tistory.com
-            </a>
-            &nbsp;/&nbsp;
-            <a href='https://github.com/yngjnhykk' target='_blank'>
-              https://github.com/yngjnhykk
-            </a>
-            &nbsp;/&nbsp;
-            <a href='dskzpbmk@naver.com' target='_blank'>
-              dskzpbmk@naver.com
-            </a>
-          </PersonalLinks> */}
         </TitleContent>
-        <p>
-          관광학을 전공했고, <span style={{ fontWeight: 'bold' }}>사람들을 도와주는 일</span>을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
-        </p>
-        <p>
-          서비스를 제공하는 것에서 이젠 <span style={{ fontWeight: 'bold' }}>좋은 서비스</span>를 만들고 싶어 개발자가 되려고 합니다.
-        </p>
-        <p>
-          개발 공부를 시작하면서 꾸준히 공부한 내용을 블로그로 작성하고 있습니다. 매일 Tech 설명회를 챙겨보며 유지보수가 쉽고 중복 없는 '좋은 코드' 에 대한
-          관점을 넓히기 위해 노력하고 있습니다.
-        </p>
-        <p>프론트엔드 개발자로 도전하는 결단력과 지속적인 학습 의지를 갖추어, 개발자에 대한 열망을 통해 미래에 더 나은 전문성을 쌓아가고자 합니다.</p>
-
-        <h2>
-          <div style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <div>Contact & Channel</div>
-          </div>
-        </h2>
-        <WorkExperience>
-          <Content>
-            <ContentKey style={{ height: '27px' }}>
-              <h4>Contact</h4>
-            </ContentKey>
-            <ContentValue style={{ fontWeight: '400', display: 'flex', flexDirection: 'row', gap: '4px' }}>
+        <Content>
+          <ContentKey style={{ minWidth: '200px' }}>
+            <img style={{ height: '218px' }} src={profileImage}></img>
+          </ContentKey>
+          <ContentValue style={{ fontWeight: '400', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <h2 style={{ border: 'none', margin: '0px', fontSize: '20px', marginTop: '-10px' }}>Contact</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
                 <Email /> | dskzpbmk@naver.com{' '}
               </div>
-              &nbsp;/&nbsp;
               <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
                 <Phone /> | 010-7518-2910
               </div>
-            </ContentValue>
-          </Content>
-          <Content style={{ paddingBottom: '20px' }}>
-            <ContentKey style={{ height: '27px' }}>
-              <h4>Channel</h4>
-            </ContentKey>
-            <ContentValue style={{ fontWeight: '400', display: 'flex', flexDirection: 'row' }}>
+            </div>
+
+            <h2 style={{ border: 'none', margin: '0px', marginTop: '10px', fontSize: '20px' }}>Channel</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <a href='https://yngjnhyk.tistory.com' target='_blank' style={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <Tistory /> | https://yngjnhyk.tistory.com
               </a>
-              &nbsp;&nbsp;/&nbsp;&nbsp;
               <a href='https://github.com/yngjnhykk' target='_blank' style={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <Github /> | https://github.com/yngjnhykk
               </a>
-            </ContentValue>
-          </Content>
+            </div>
+          </ContentValue>
+        </Content>
+
+        <h2>
+          <div style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <div>Introduce</div>
+          </div>
+        </h2>
+        <WorkExperience style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+          <p>
+            관광학을 전공했고, <span style={{ fontWeight: 'bold' }}>사람들을 도와주는 일</span>을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
+          </p>
+          <p>
+            서비스를 제공하는 것에서 이젠 <span style={{ fontWeight: 'bold' }}>좋은 서비스</span>를 만들고 싶어 개발자가 되려고 합니다.
+          </p>
+          <p>
+            개발 공부를 시작하면서 꾸준히 공부한 내용을 블로그로 작성하고 있습니다. 매일 Tech 설명회를 챙겨보며 유지보수가 쉽고 중복 없는 '좋은 코드' 에 대한
+            관점을 넓히기 위해 노력하고 있습니다.
+          </p>
+          <p>프론트엔드 개발자로 도전하는 결단력과 지속적인 학습 의지를 갖추어, 개발자에 대한 열망을 통해 미래에 더 나은 전문성을 쌓아가고자 합니다.</p>
         </WorkExperience>
 
         <h2>
@@ -87,7 +67,7 @@ function Profile({}: Props) {
         </h2>
         <WorkExperience>
           <Content>
-            <ContentKey style={{ height: '148px' }}>
+            <ContentKey style={{ height: '222px' }}>
               <h4>Frontend</h4>
             </ContentKey>
 
@@ -96,6 +76,8 @@ function Profile({}: Props) {
               <li>React, Redux, styled-components, react-query</li>
               <li>Typescript</li>
               <li>Vite</li>
+              <li>GitHube</li>
+              <li>Figma</li>
             </ContentValue>
           </Content>
         </WorkExperience>
@@ -344,18 +326,18 @@ const InfoArticle = styled.div`
     font-kerning: normal;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-bottom: 0.8125rem;
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    margin-bottom: 13px;
     font-size: 14px;
+    margin-top: 0px;
   }
   h2 {
     margin-bottom: 0.5em;
     border-bottom: 0;
     margin-top: 60.5px;
     font-family: 'Catamaran', sans-serif;
+    color: #0687f0;
     font-size: 25px;
     font-weight: 700;
-    color: #0687f0;
     opacity: 0.8;
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   }
