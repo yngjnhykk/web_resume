@@ -13,11 +13,10 @@
 }
 
 * {
-  
 }
 
 .wrap {
-  max-width: 689px;
+  max-width: 900px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 19.5px;

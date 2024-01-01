@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import Github from '../../assets/fonts/icon/Github';
-import Notion from '../../assets/fonts/icon/Notion';
-import LowesPrice from '../../assets/fonts/icon/LowesPrice';
-import Tistory from '../../assets/fonts/icon/Tistory';
-import Email from '../../assets/fonts/icon/Email';
-import Phone from '../../assets/fonts/icon/Phone';
+import Github from '../../assets/icon/Github';
+import Notion from '../../assets/icon/Notion';
+import LowesPrice from '../../assets/icon/LowesPrice';
+import Tistory from '../../assets/icon/Tistory';
+import Email from '../../assets/icon/Email';
+import Phone from '../../assets/icon/Phone';
 import profileImage from '../../assets/profileImage.jpg';
+import Link from '../../assets/icon/Link';
 
 type Props = {};
 
@@ -89,13 +90,9 @@ function Profile({}: Props) {
           <WorkExperienceItem>
             <h3>
               <span>내일은 최저가</span>
-              {/* <span style={{ fontSize: '15px', color: '#9b9a97' }}>항해99</span> */}
               <div>(2023.10 ~ 2023.11)</div>
             </h3>
-            <span>
-              쿠팡 Apple 제품의 <span style={{ fontWeight: 'bold', color: 'orange' }}>Dynamic Pricing</span> 을 추적해 최적의 구매 타이밍을 알려주는{' '}
-              <span style={{ fontWeight: 'bold' }}>검색 서비스.</span>
-            </span>
+            <span>쿠팡 Apple 제품의 Dynamic Pricing 을 추적해 최적의 구매 타이밍을 알려주는 검색 서비스</span>
             <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', marginTop: '21px' }}>
               <TableKey>position</TableKey>
               <TableValue>FE, 팀 리더</TableValue>
@@ -116,7 +113,7 @@ function Profile({}: Props) {
                   Github
                 </a>
                 /
-                <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/93659abf7dde4df487199796cec747af' target='_blank'>
+                <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/Apple-7b07d49a4b0640e9bfe3b10e9e275731' target='_blank'>
                   <Notion />
                   Portfolio
                 </a>
@@ -134,99 +131,99 @@ function Profile({}: Props) {
             </Table>
 
             <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '451px' }}>
-                <h4>What i did</h4>
-                <h5>(맡은 역할)</h5>
+              <ContentKey style={{ height: '683.54px' }}>
+                <h4>수행 내용</h4>
+                {/* <h5>(맡은 역할)</h5> */}
               </ContentKey>
               <ContentValue>
                 <div>
-                  <span style={{ fontWeight: 'bold', fontSize: '15px' }}>프론트엔드 개발</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>프론트엔드 개발</span>
+                  <li style={{ marginTop: '10px' }}>페이지 제작 기여도 70% (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 반응형 제작)</li>
+                  <li>전체 기능 로직 60% 구현 (로그인, 마이페이지, 상품 검색/필터/옵션/정렬, 최근 검색어, 알림설정/취소 등)</li>
+                  <li> Splash Screen 및 refresh Token 을 이용한 자동로그인 구현 </li>
                   <li>
-                    <span style={{ fontWeight: 'bold' }}>페이지 제작 기여도 70%</span> (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 제작)
-                  </li>
-                  <li>
-                    <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                      GitHub Actions
+                    <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{}}>
+                      GitHub Actions 를 통한 배포 자동화 (Amazon S3)
+                      <Link />
                     </a>
-                    를 통한 배포 자동화 (Amazon S3)
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li>유저 피드백을 진행하면서 수정사항을 수동으로 배포하는 과정에서 과도한 시간 비용 발생</li>
+                      <li style={{ marginTop: '5px' }}>별도의 서버 설치 없이 GitHub 통합으로 적용이 간편한 Github Action 선택해 자동화로 비용과 시간을 절감</li>
+                    </ul>
                   </li>
                   <li>
-                    <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{ textDecoration: 'underline' }}>
-                      소셜 로그인(kakao)
-                    </a>{' '}
-                    기능 구현(<span style={{ fontWeight: 'bold' }}>SDK</span>)
+                    <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
+                      소셜 로그인(kakao) 기능 구현(SDK)
+                      <Link />
+                    </a>
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li>유저 개인정보를 필요로 하는 알림톡 기능을 위해 소셜로그인으로 카카오를 선정</li>
+                      <li style={{ marginTop: '5px' }}>
+                        Rest API 와 SDK 방식 중 프로젝트 규모가 크지 않고, 사용에 편리해 SDK 방식을 선택했고, 편리하게 사용자 정보(전화번호)를 얻어 UX 개선
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    라이브러리 없이{' '}
-                    <span style={{ textDecoration: 'underline' }}>
-                      <a href='https://yngjnhyk.tistory.com/391' target='_blank'>
-                        <span style={{ fontWeight: 'bold' }}>Carousel </span>기능 구현
-                      </a>
-                    </span>
+                    <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
+                      pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현
+                      <Link />
+                    </a>
+                  </li>
+                  {/* <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                    <li></li>
+                  </ul> */}
+                  <li>
+                    <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
+                      신규 유저 유입 분석을 위해 웹 어플리케이션과 Google Analytics 연동으로 데이터 시각화
+                      <Link />
+                    </a>
                   </li>
                   <li>
-                    신규 유저 유입 분석을 위해 웹 어플리케이션과{' '}
-                    <a
-                      href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB'
-                      target='_blank'
-                      style={{ fontWeight: 'bold', textDecoration: 'underline' }}
-                    >
-                      Google Analytics
-                    </a>{' '}
-                    연동으로 데이터 시각화
+                    <span style={{ fontWeight: 'bold' }}></span>시멘틱 태그와 <span style={{ fontWeight: 'bold' }}></span>aria-label 등을 이용해 웹 접근성 개선
                   </li>
 
-                  <li>상품 필터 기능 구현</li>
-                  <li>
-                    <span style={{ fontWeight: 'bold' }}>시멘틱 태그</span>와 <span style={{ fontWeight: 'bold' }}>aria-label </span>등을 이용해 웹 접근성 개선.
-                  </li>
-
-                  <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '20px' }}>성능 최적화</div>
-                  <li>
-                    <span style={{ textDecoration: 'underline' }}>
-                      <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
-                        <span style={{ fontWeight: 'bold' }}> 코드 스플리팅</span>을 통해 번들링 사이즈 17% 줄여{' '}
-                      </a>
-                    </span>
-                    초기 로딩 속도 개선
+                  <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '20px' }}>성능 최적화</div>
+                  <li style={{ marginTop: '10px' }}>
+                    <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
+                      Code Spliting을 통해 필요시 동적 로딩으로 번들링 사이즈 17% 줄여 초기 로딩 속도 개선
+                      <Link />
+                    </a>
                   </li>
 
                   <li>React.memo, useCallback, useMemo 를 이용한 불필요한 리렌더링 관리</li>
+                  <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                    <li>React Delveloper Tools 로 불필요한 리렌더링을 감지</li>
+                    <li>컴포넌트, 함수, 변수를 기준으로 리액트 훅을 적절히 사용해 렌더링 비용 절감</li>
+                  </ul>
                 </div>
               </ContentValue>
             </Content>
 
             <Content>
-              <ContentKey style={{ height: '317px' }}>
-                <h4>TroubleShooting</h4>
-                <h5>(문제 해결 경험)</h5>
+              <ContentKey style={{ height: '340.57px' }}>
+                <h4>문제 해결 경험</h4>
+                {/* <h5>(문제 해결 경험)</h5> */}
               </ContentKey>
               <ContentValue>
-                <span style={{ fontWeight: 'bold' }}>Infinite Scroll</span>
-                <li style={{ marginBottom: '0px' }}>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Infinite Scroll</span>
+                <li style={{ marginBottom: '0px', marginTop: '10px' }}>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
                 <li style={{ marginBottom: '0px' }}>
                   원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈
                 </li>
                 <li>
-                  해결:{' '}
-                  <span style={{ textDecoration: 'underline' }}>
-                    <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
-                      <span style={{ fontWeight: 'bold' }}>Intersection Observer </span>와 react-query 의
-                      <span style={{ fontWeight: 'bold' }}> useInfinitequery </span>를 사용해 Lazy Loading 을 구현
-                    </a>
-                  </span>
-                  하여 26000ms 의 로딩 속도를 1100ms 로 개선
+                  <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
+                    해결: Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 26000ms 의 로딩 속도를 1100ms 로 개선
+                    <Link />
+                  </a>
                 </li>
-                <span style={{ fontWeight: 'bold' }}>SEO(검색 엔진 최적화)</span>
-                <li style={{ marginBottom: '0px' }}>문제: 구글 애널리틱스에서 어려운 유저유입 파악</li>
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SEO(검색 엔진 최적화)</span>
+                <li style={{ marginBottom: '0px', marginTop: '10px' }}>문제: 구글 애널리틱스에서 어려운 유저유입 파악</li>
                 <li style={{ marginBottom: '0px' }}>원인: 페이지들의 title 이 모두 같아 파악하는 데 어려움 존재</li>
                 <li>
-                  해결: SEO 개선 및 유저 유입 파악을 위해 <span style={{ fontWeight: 'bold' }}>react-helmet </span>으로{' '}
-                  <span style={{ textDecoration: 'underline' }}>
-                    <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
-                      페이지별 메타태그 설정 후, 구글 애널리틱스로 유저 유입 파악
-                    </a>
-                  </span>
+                  <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
+                    해결: SEO 개선 및 유저 유입 파악을 위해 fontWeight: 'bold' react-helmet 으로 페이지별 메타태그 설정 후, 구글 애널리틱스로 유저 유입 파악
+                    <Link />
+                  </a>
                 </li>
               </ContentValue>
             </Content>
@@ -257,13 +254,10 @@ function Profile({}: Props) {
                 <li>스파르타 코딩클럽에서 진행한 개발자 양성 교육 과정</li>
                 <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
                   <li>
-                    99일 주 100시간 교육(
-                    <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                      <a href='https://hanghae99.spartacodingclub.kr/v2/graduate/649381ad5fdc0b18c32485f5' target='_blank'>
-                        하루 평균 15시간 몰입
-                      </a>
-                    </span>
-                    )
+                    <a href='https://hanghae99.spartacodingclub.kr/v2/graduate/649381ad5fdc0b18c32485f5' target='_blank'>
+                      99일 주 100시간 교육( 하루 평균 15시간 몰입 )
+                      <Link />
+                    </a>
                   </li>
                   <li>JavaScript의 ES6 주요 문법, 비동기 등 웹 개발을 위한 핵심 내용 학습</li>
                   <li>FE, BE, Designer 로 구성된 팀 프로젝트 2회 진행</li>
@@ -478,6 +472,7 @@ const ContentValue = styled.div`
   li {
     margin-left: 15px;
     margin-bottom: 10px;
+    font-weight: 300;
     /* list-style-position: inside; */
     /* text-indent: -50px; */
 
