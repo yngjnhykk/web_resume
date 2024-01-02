@@ -131,7 +131,7 @@ function Profile({}: Props) {
             </Table>
 
             <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '683.54px' }}>
+              <ContentKey style={{ height: '818px' }}>
                 <h4>수행 내용</h4>
                 {/* <h5>(맡은 역할)</h5> */}
               </ContentKey>
@@ -327,7 +327,7 @@ const InfoArticle = styled.div`
   h2 {
     margin-bottom: 0.5em;
     border-bottom: 0;
-    margin-top: 60.5px;
+    margin-top: 80.5px;
     font-family: 'Catamaran', sans-serif;
     color: #0687f0;
     font-size: 25px;
@@ -465,7 +465,7 @@ const ContentKey = styled.div`
   }
 `;
 const ContentValue = styled.div`
-  padding-left: 30px;
+  padding-left: 10px;
   font-size: 15px;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
