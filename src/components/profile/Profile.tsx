@@ -7,6 +7,7 @@ import Email from '../../assets/icon/Email';
 import Phone from '../../assets/icon/Phone';
 import profileImage from '../../assets/profileImage.jpg';
 import Link from '../../assets/icon/Link';
+import Twiter from '../../assets/icon/Twiter';
 
 type Props = {};
 
@@ -14,34 +15,32 @@ function Profile({}: Props) {
   return (
     <div>
       <InfoArticle>
-        <TitleContent style={{ marginBottom: '30px' }}>
-          <h1>안녕하세요, 프론트엔드 양진혁 입니다.</h1>
-        </TitleContent>
         <Content>
-          <ContentKey style={{ minWidth: '200px' }}>
+          <TitleContent style={{ marginBottom: '20px' }}>
+            <h1 style={{ fontSize: '40px', marginBottom: '10px' }}>양진혁</h1>
+            <div style={{ fontSize: '22px' }}>프론트엔드 개발자</div>
+            <div style={{ marginTop: '10px', fontSize: '13px' }}>
+              <div style={{ gap: '8px' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
+                  <Email /> dskzpbmk@naver.com{' '}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
+                  <Phone /> 010-7518-2910
+                </div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '2px' }}>
+                <a href='https://yngjnhyk.tistory.com' target='_blank' style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <Tistory /> https://yngjnhyk.tistory.com
+                </a>
+                <a href='https://github.com/yngjnhykk' target='_blank' style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <Github /> https://github.com/yngjnhykk
+                </a>
+              </div>
+            </div>
+          </TitleContent>
+          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '43px', top: '70px' }}>
             <img style={{ height: '218px' }} src={profileImage}></img>
           </ContentKey>
-          <ContentValue style={{ fontWeight: '400', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-            <h2 style={{ border: 'none', margin: '0px', fontSize: '20px', marginTop: '-10px' }}>Contact</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
-                <Email /> | dskzpbmk@naver.com{' '}
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
-                <Phone /> | 010-7518-2910
-              </div>
-            </div>
-
-            <h2 style={{ border: 'none', margin: '0px', marginTop: '10px', fontSize: '20px' }}>Channel</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <a href='https://yngjnhyk.tistory.com' target='_blank' style={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <Tistory /> | https://yngjnhyk.tistory.com
-              </a>
-              <a href='https://github.com/yngjnhykk' target='_blank' style={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <Github /> | https://github.com/yngjnhykk
-              </a>
-            </div>
-          </ContentValue>
         </Content>
 
         <h2>
@@ -92,22 +91,15 @@ function Profile({}: Props) {
               <span>내일은 최저가</span>
               <div>(2023.10 ~ 2023.11)</div>
             </h3>
-            <span>쿠팡 Apple 제품의 Dynamic Pricing 을 추적해 최적의 구매 타이밍을 알려주는 검색 서비스</span>
-            <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', marginTop: '21px' }}>
-              <TableKey>position</TableKey>
-              <TableValue>FE, 팀 리더</TableValue>
-            </Table>
-            <Table>
-              <TableKey>members</TableKey>
-              <TableValue>Front-end 2명 / Back-end 2명 / Designer 1명</TableValue>
-            </Table>
-            <Table>
-              <TableKey>skills</TableKey>
-              <TableValue>React, TypeScript, styled-components, react-query, vite</TableValue>
-            </Table>
-            <Table>
-              <TableKey>url</TableKey>
-              <TableValue>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>항해99 실전프로젝트 (FE2, BE4, DE1) / 팀 리더</div>
+            <div style={{ marginTop: '10px' }}>쿠팡 Apple 제품의 Dynamic Pricing 을 추적해 최적의 구매 타이밍을 알려주는 검색 서비스</div>
+
+            <Content>
+              <ContentKey>
+                <h4>url</h4>
+              </ContentKey>
+              <TableValue style={{ border: 'none' }}>
+                {' '}
                 <a href='https://github.com/LowestPrice/LowestPrice-FE' target='_blank'>
                   <Github />
                   Github
@@ -128,7 +120,15 @@ function Profile({}: Props) {
                   회고
                 </a>
               </TableValue>
-            </Table>
+            </Content>
+            <Content>
+              <ContentKey>
+                <h4>사용 기술</h4>
+              </ContentKey>
+              <ContentValue>
+                <>React, React-Router, TypeScript, Styled-Components, React-Query, Vite, Axios, Chart.js, React-Quil, js-cookie, swiper</>
+              </ContentValue>
+            </Content>
 
             <Content style={{ marginTop: '20px' }}>
               <ContentKey style={{ height: '818px' }}>
@@ -225,6 +225,58 @@ function Profile({}: Props) {
                     <Link />
                   </a>
                 </li>
+              </ContentValue>
+            </Content>
+          </WorkExperienceItem>
+
+          <WorkExperienceItem style={{ marginTop: '50px' }}>
+            <h3>
+              <span>NNN(Next + Node + sNs)</span>
+              <div>(2024.01 ~ 진행중)</div>
+            </h3>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 프로젝트</div>
+            <div style={{ marginTop: '10px' }}>Next.js + Node.js 로 구현한 SNS 서비스</div>
+
+            <Content>
+              <ContentKey>
+                <h4>url</h4>
+              </ContentKey>
+              <TableValue style={{ border: 'none' }}>
+                {' '}
+                <a href='https://github.com/yngjnhykk/NodeBird_SNS' target='_blank'>
+                  <Github />
+                  Github
+                </a>
+                /
+                <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
+                  <Twiter />
+                  Service
+                </a>
+                {/* /
+                <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
+                  <Tistory />
+                  회고
+                </a> */}
+              </TableValue>
+            </Content>
+            <Content>
+              <ContentKey>
+                <h4>사용 기술</h4>
+              </ContentKey>
+              <ContentValue>
+                <div style={{ fontSize: '16px' }}>React, Redux & Redux-Saga, Ant-Design, Styled-Components, SWR, AWS</div>
+              </ContentValue>
+            </Content>
+            <Content>
+              <ContentKey style={{ height: '240.78px' }}>
+                <h4>수행 내용</h4>
+              </ContentKey>
+              <ContentValue>
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>프론트엔드 개발</span>
+                <li style={{ marginTop: '10px' }}>로그인, 게시글 CRUD, 좋아요, 이미지 업로드, 댓글, 리트윗, 좋아요 등 기본적인 SNS 기능 구현</li>
+                <li>SEO 개선과 Code spliting 기능을 위해 Next.js 를 통해 SSR 사용</li>
+                <li>쉬운 반응형 페이지와 기능에 집중하기 위해 ant-desogn 라이브러리 사용</li>
+                <li>서버 없이 프론트엔드 구현을 먼저 진행하기 위해 Redux 와 Redux-Saga 를 이용해 상태를 관리하고, faker 와 uuid 를 통해 목 데이터 구현</li>
               </ContentValue>
             </Content>
           </WorkExperienceItem>
@@ -329,11 +381,11 @@ const InfoArticle = styled.div`
     border-bottom: 0;
     margin-top: 80.5px;
     font-family: 'Catamaran', sans-serif;
-    color: #0687f0;
+    color: black;
     font-size: 25px;
     font-weight: 700;
     opacity: 0.8;
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+    border-bottom: 1px solid black;
   }
 `;
 
@@ -365,8 +417,10 @@ const TitleContent = styled.div`
 //   }
 // `;
 
+//  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+
 const WorkExperience = styled.div`
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 1px solid black;
 `;
 
 const WorkExperienceItem = styled.div`
@@ -393,7 +447,8 @@ const WorkExperienceItem = styled.div`
       font-size: 15px;
       font-weight: 600;
       margin-left: auto;
-      color: #9b9a97;
+      /* color: #9b9a97; */
+      color: black;
     }
   }
   table {
@@ -402,29 +457,29 @@ const WorkExperienceItem = styled.div`
   }
 `;
 
-const Table = styled.div`
-  width: 100%;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-right: 1px solid hsla(0, 0%, 0%, 0.12);
-`;
+// const Table = styled.div`
+//   width: 100%;
+//   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   border-right: 1px solid hsla(0, 0%, 0%, 0.12);
+// `;
 
-const TableKey = styled.div`
-  width: 100.886px;
-  height: 45px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 0px;
-  text-align: left;
-  padding-right: 1.08333rem;
-  padding-left: 0.3rem;
+// const TableKey = styled.div`
+//   width: 100.886px;
+//   height: 45px;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   padding-left: 0px;
+//   text-align: left;
+//   padding-right: 1.08333rem;
+//   padding-left: 0.3rem;
 
-  font-weight: 600;
-  border-left: 1px solid hsla(0, 0%, 0%, 0.12);
-`;
+//   font-weight: 600;
+//   border-left: 1px solid hsla(0, 0%, 0%, 0.12);
+// `;
 const TableValue = styled.div`
   width: 100%;
   height: 45px;
