@@ -15,7 +15,7 @@ function Profile({}: Props) {
   return (
     <div>
       <InfoArticle>
-        <Content>
+        <Content style={{ position: 'relative' }}>
           <TitleContent style={{ marginBottom: '20px' }}>
             <h1 style={{ fontSize: '40px', marginBottom: '10px' }}>양진혁</h1>
             <div style={{ fontSize: '22px' }}>프론트엔드 개발자</div>
@@ -38,7 +38,7 @@ function Profile({}: Props) {
               </div>
             </div>
           </TitleContent>
-          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '43px', top: '70px' }}>
+          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '-21px', top: '55px' }}>
             <img style={{ height: '218px' }} src={profileImage}></img>
           </ContentKey>
         </Content>
