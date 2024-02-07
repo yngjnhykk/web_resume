@@ -3,11 +3,10 @@ import Github from '../../assets/icon/Github';
 import Notion from '../../assets/icon/Notion';
 import LowesPrice from '../../assets/icon/LowesPrice';
 import Tistory from '../../assets/icon/Tistory';
-import Email from '../../assets/icon/Email';
-import Phone from '../../assets/icon/Phone';
 import profileImage from '../../assets/profileImage.jpg';
+import serviceview from '../../assets/service_view.png';
+import carouselCode from '../../assets/carousel_code.png';
 import Link from '../../assets/icon/Link';
-import Twiter from '../../assets/icon/Twiter';
 
 type Props = {};
 
@@ -16,30 +15,37 @@ function Profile({}: Props) {
     <div>
       <InfoArticle>
         <Content style={{ position: 'relative' }}>
-          <TitleContent style={{ marginBottom: '20px' }}>
+          <TitleContent style={{ marginBottom: '20px', marginLeft: '50px' }}>
             <h1 style={{ fontSize: '40px', marginBottom: '10px' }}>양진혁</h1>
             <div style={{ fontSize: '22px' }}>프론트엔드 개발자</div>
             <div style={{ marginTop: '10px', fontSize: '13px' }}>
-              <div style={{ gap: '8px' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
-                  <Email /> dskzpbmk@naver.com{' '}
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
-                  <Phone /> 010-7518-2910
-                </div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '2px' }}>
+              <div style={{ gap: '8px' }}></div>
+              <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '2px', marginBottom: '10px', gap: '10px' }}>
                 <a href='https://yngjnhyk.tistory.com' target='_blank' style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <Tistory /> https://yngjnhyk.tistory.com
+                  <Tistory /> Blog
                 </a>
                 <a href='https://github.com/yngjnhykk' target='_blank' style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <Github /> https://github.com/yngjnhykk
+                  <Github /> Github
                 </a>
               </div>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
+                <li>Email: dskzpbmk@naver.com </li>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
+                <li>Contact: 010-7518-2910</li>
+              </div>
+              <li>
+                Skills
+                <ul style={{ listStyleType: 'circle', paddingLeft: '30px', fontWeight: '500' }}>
+                  <li>JavaScript, TypeScript HTML5, CSS3</li>
+                  <li>ReactJS, Redux, Redux-Saga, NextJS, Styled-Components</li>
+                  <li>Github, Vercel, Framer</li>
+                </ul>
+              </li>
             </div>
           </TitleContent>
-          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '-21px', top: '55px' }}>
-            <img style={{ height: '218px' }} src={profileImage}></img>
+          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '50px', top: '55px' }}>
+            <img style={{ height: '280px' }} src={profileImage}></img>
           </ContentKey>
         </Content>
 
@@ -63,26 +69,6 @@ function Profile({}: Props) {
         </WorkExperience>
 
         <h2>
-          <div>Skills</div>
-        </h2>
-        <WorkExperience>
-          <Content>
-            <ContentKey style={{ height: '222px' }}>
-              <h4>Frontend</h4>
-            </ContentKey>
-
-            <ContentValue style={{ fontWeight: '600' }}>
-              <li>HTML5, CSS3, JavaScript</li>
-              <li>React, Redux, styled-components, react-query</li>
-              <li>Typescript</li>
-              <li>Vite</li>
-              <li>GitHube</li>
-              <li>Figma</li>
-            </ContentValue>
-          </Content>
-        </WorkExperience>
-
-        <h2>
           <span>Projects Experience</span>
         </h2>
         <WorkExperience>
@@ -94,142 +80,251 @@ function Profile({}: Props) {
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>항해99 실전프로젝트 (FE2, BE4, DE1) / 팀 리더</div>
             <div style={{ marginTop: '10px' }}>쿠팡 Apple 제품의 Dynamic Pricing 을 추적해 최적의 구매 타이밍을 알려주는 검색 서비스</div>
 
-            <Content>
-              <ContentKey>
-                <h4>url</h4>
-              </ContentKey>
-              <TableValue style={{ border: 'none' }}>
-                {' '}
-                <a href='https://github.com/LowestPrice/LowestPrice-FE' target='_blank'>
-                  <Github />
-                  Github
-                </a>
-                /
-                <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/Apple-7b07d49a4b0640e9bfe3b10e9e275731' target='_blank'>
-                  <Notion />
-                  Portfolio
-                </a>
-                /
-                <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
-                  <LowesPrice />
-                  Service
-                </a>
-                /
-                <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
-                  <Tistory />
-                  회고
-                </a>
-              </TableValue>
-            </Content>
-            <Content>
-              <ContentKey>
-                <h4>사용 기술</h4>
-              </ContentKey>
-              <ContentValue>
-                <>React, React-Router, TypeScript, Styled-Components, React-Query, Vite, Axios, Chart.js, React-Quil, js-cookie, swiper</>
-              </ContentValue>
-            </Content>
+            <Content style={{ gap: '30px' }}>
+              <ContentKey style={{ height: '2138px', width: '30%' }}>
+                <Content>
+                  <ContentValue>
+                    <h4>link</h4>
+                    <div>
+                      <TableValue style={{ border: 'none' }}>
+                        {' '}
+                        <a href='https://github.com/LowestPrice/LowestPrice-FE' target='_blank'>
+                          <Github />
+                          Github
+                        </a>
+                        /
+                        <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/Apple-7b07d49a4b0640e9bfe3b10e9e275731' target='_blank'>
+                          <Notion />
+                          Portfolio
+                        </a>
+                      </TableValue>
+                      <TableValue style={{ border: 'none' }}>
+                        <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
+                          <LowesPrice />
+                          Service
+                        </a>
+                        /
+                        <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
+                          <Tistory />
+                          회고
+                        </a>
+                      </TableValue>
+                    </div>
+                  </ContentValue>
+                </Content>
 
-            <Content style={{ marginTop: '20px' }}>
-              <ContentKey style={{ height: '818px' }}>
-                <h4>수행 내용</h4>
-                {/* <h5>(맡은 역할)</h5> */}
+                <Content style={{ marginTop: '50px' }}>
+                  <ContentValue>
+                    <h4>사용 기술</h4>
+                    <li style={{ fontWeight: '500' }}>
+                      ReactJS
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>React Hooks 를 이용한 렌더링 최적화</li>
+                        <li style={{ marginBottom: '5px' }}>React lazy 를 통한 코드 스플리팅</li>
+                        <li style={{ marginBottom: '5px' }}>Axios 를 통한 비동기 데이터 요청</li>
+                        <li style={{ marginBottom: '5px' }}>팀원이 만든 컴포넌트 재사용</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      TypeScript
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>interface 를 통한 데이터 타입 설정</li>
+                        <li style={{ marginBottom: '5px' }}>컴파일 타입 에러 슈팅 경험</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      React-Query
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>useInfiniteQuery 를 이용한 무한 스크롤</li>
+                        <li style={{ marginBottom: '5px' }}>invalidQueries 을 통한 쿼리 무효화(좋아요, 알림설정)</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      Styled-Components
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>props 연동을 통해 조건부 스타일링 및 동적 스타일링 가능</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      React-Router
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>createBrowseRouter 경험</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      Swiper
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>모바일 환경에서의 터치 이벤트에 잘 반응하는 Slider 를 표현하기 위해 선택</li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      Vite
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>
+                          프로젝트의 규모가 커지면서 CRA 처럼 JS 코드를 모두 번들하지 않고, 브라우저가 필요로 하는 애플리케이션 코드의 일부분만 변화하는 Vite 를
+                          선택
+                        </li>
+                      </ul>
+                    </li>
+                    <li style={{ fontWeight: '500' }}>
+                      Js-Cookie
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                        <li style={{ marginBottom: '5px' }}>JWT 토큰을 쿠키에 보관하기 위해 도입</li>
+                      </ul>
+                    </li>
+                  </ContentValue>
+                </Content>
+                {/* <Content>
+                  <ContentKey>담당 기능</ContentKey>
+                  <ContentValue>
+                    <img src={myFeature}></img>
+                  </ContentValue>
+                </Content> */}
               </ContentKey>
-              <ContentValue>
-                <div>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>프론트엔드 개발</span>
-                  <li style={{ marginTop: '10px' }}>페이지 제작 기여도 70% (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 반응형 제작)</li>
-                  <li>전체 기능 로직 60% 구현 (로그인, 마이페이지, 상품 검색/필터/옵션/정렬, 최근 검색어, 알림설정/취소 등)</li>
-                  <li> Splash Screen 및 refresh Token 을 이용한 자동로그인 구현 </li>
-                  <li>
-                    <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{}}>
-                      GitHub Actions 를 통한 배포 자동화 (Amazon S3)
-                      <Link />
-                    </a>
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li>유저 피드백을 진행하면서 수정사항을 수동으로 배포하는 과정에서 과도한 시간 비용 발생</li>
-                      <li style={{ marginTop: '5px' }}>별도의 서버 설치 없이 GitHub 통합으로 적용이 간편한 Github Action 선택해 자동화로 비용과 시간을 절감</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
-                      소셜 로그인(kakao) 기능 구현(SDK)
-                      <Link />
-                    </a>
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li>유저 개인정보를 필요로 하는 알림톡 기능을 위해 소셜로그인으로 카카오를 선정</li>
-                      <li style={{ marginTop: '5px' }}>
-                        Rest API 와 SDK 방식 중 프로젝트 규모가 크지 않고, 사용에 편리해 SDK 방식을 선택했고, 편리하게 사용자 정보(전화번호)를 얻어 UX 개선
+              <ContentValue style={{ width: '70%' }}>
+                <Content>
+                  <ContentValue>
+                    <h4>Service View</h4>
+                    <img style={{ height: '280px', width: '800px' }} src={serviceview}></img>
+                  </ContentValue>
+                </Content>
+                <Content style={{ marginTop: '30px' }}>
+                  <ContentValue>
+                    <h4>수행 내용</h4>
+                    <div>
+                      <span style={{ fontWeight: 'bold', fontSize: '16px' }}>프론트엔드 개발</span>
+                      <li style={{ marginTop: '10px' }}>페이지 제작 기여도 70% (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 반응형 제작)</li>
+
+                      <li style={{ marginTop: '20px' }}>
+                        전체 기능 로직 60% 구현 (로그인, 마이페이지, 상품 검색/필터/옵션/정렬, 최근 검색어, 알림설정/취소 등)
+                      </li>
+
+                      <li style={{ marginTop: '20px' }}> Splash Screen 제작 및 refresh Token 을 이용한 자동로그인 구현 </li>
+
+                      <li style={{ marginTop: '20px' }}>
+                        <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{}}>
+                          GitHub Actions 를 통한 배포 자동화 (Amazon S3)
+                          <Link />
+                        </a>
+                        <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                          <li>유저 피드백을 진행하면서 수정사항을 수동으로 배포하는 과정에서 과도한 시간 비용 발생</li>
+                          <li style={{ marginTop: '5px' }}>
+                            별도의 서버 설치 없이 GitHub 통합으로 적용이 간편한 Github Action 선택해 자동화로 비용과 시간을 절감
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li style={{ marginTop: '20px' }}>
+                        <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
+                          소셜 로그인(kakao) 기능 구현(SDK)
+                          <Link />
+                        </a>
+                        <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                          <li>유저 개인정보를 필요로 하는 알림톡 기능을 위해 소셜로그인으로 카카오를 선정</li>
+                          <li style={{ marginTop: '5px' }}>
+                            Rest API 와 SDK 방식 중 프로젝트 규모가 크지 않고, 사용에 편리해 SDK 방식을 선택했고, 편리하게 사용자 정보(전화번호)를 얻어 UX 개선
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li style={{ marginTop: '20px' }}>
+                        <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
+                          pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현
+                          <Link />
+                        </a>
+                        <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                          <li>메인페이지에서 할인율이 높은 순위에 있는 제품들을 Carousel 로 보여주어야 하는 feature 가 있었음</li>
+                          <ul style={{ listStyle: 'square', marginLeft: '40px' }}>
+                            <li>css 속성인 translateX 를 통해 animation 효과를 줄 수 있었고, content 마다 index 에 삼항연산자를 적용해 carousel 기능을 구현</li>
+                            <li>React Hook 인 useEffect 와 setTimeout 을 통해 content 가 자동으로 넘어갈 수 있게 UI적 성과를 얻음</li>
+                          </ul>
+                        </ul>
+                      </li>
+                      <img src={carouselCode} style={{ width: '750px', marginLeft: '37px' }} />
+
+                      <li style={{ marginTop: '20px' }}>
+                        <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
+                          신규 유저 유입 분석을 위해 웹 어플리케이션과 Google Analytics 연동으로 데이터 시각화
+                          <Link />
+                        </a>
+                      </li>
+
+                      <li style={{ marginTop: '20px' }}>
+                        <span style={{ fontWeight: 'bold' }}></span>시멘틱 태그와 <span style={{ fontWeight: 'bold' }}></span>aria-label 등을 이용해 웹 접근성
+                        개선
+                      </li>
+
+                      <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>성능 최적화</div>
+                      <li style={{ marginTop: '10px' }}>
+                        <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
+                          React lazy 와 Suspense 로 Code Spliting을 적용해 필요시 동적 로딩으로 번들링 사이즈 17% 줄여 초기 로딩 속도 개선
+                          <Link />
+                        </a>
+                      </li>
+
+                      <li>React.memo, useCallback, useMemo 를 이용한 불필요한 리렌더링 관리</li>
+                      <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                        <li>React Delveloper Tools 로 불필요한 리렌더링을 감지</li>
+                        <li>컴포넌트, 함수, 변수를 기준으로 리액트 훅을 적절히 사용해 렌더링 비용 절감</li>
+                      </ul>
+                    </div>
+                  </ContentValue>
+                </Content>
+
+                <Content style={{ marginTop: '30px' }}>
+                  <ContentValue>
+                    <h4>문제 해결 경험</h4>
+                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>성능 문제 해결</span>
+                    <li style={{ marginTop: '10px' }}>MVP 구현 이후 첫 페이지 로딩 시간이 평균 26,000ms로 너무 느렸고, UX적 문제가 된다고 판단</li>
+                    <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                      <li>1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈 확인</li>
+                      <li>
+                        <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
+                          Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 26000ms &rarr; 1100ms 로 개선
+                          <Link />
+                        </a>
                       </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
-                      pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현
-                      <Link />
-                    </a>
-                  </li>
-                  {/* <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                    <li></li>
-                  </ul> */}
-                  <li>
-                    <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
-                      신규 유저 유입 분석을 위해 웹 어플리케이션과 Google Analytics 연동으로 데이터 시각화
-                      <Link />
-                    </a>
-                  </li>
-                  <li>
-                    <span style={{ fontWeight: 'bold' }}></span>시멘틱 태그와 <span style={{ fontWeight: 'bold' }}></span>aria-label 등을 이용해 웹 접근성 개선
-                  </li>
+                    <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', backgroundColor: '#EFEFEF', marginLeft: '50px' }}>
+                      <TableValue style={{ width: '33%' }}>before</TableValue>
+                      <TableKey style={{ width: '33%' }}>after</TableKey>
+                      <TableKey style={{ width: '33%' }}>save</TableKey>
+                    </Table>
+                    <Table style={{ marginLeft: '50px' }}>
+                      <TableValue style={{ width: '33%' }}>26,000ms</TableValue>
+                      <TableKey style={{ width: '33%' }}>1100ms</TableKey>
+                      <TableKey style={{ width: '33%' }}>95.77%</TableKey>
+                    </Table>
 
-                  <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '20px' }}>성능 최적화</div>
-                  <li style={{ marginTop: '10px' }}>
-                    <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
-                      Code Spliting을 통해 필요시 동적 로딩으로 번들링 사이즈 17% 줄여 초기 로딩 속도 개선
-                      <Link />
-                    </a>
-                  </li>
+                    <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>유저 유입 파악</div>
+                    <li style={{ marginTop: '10px' }}>
+                      구글 애널리틱스에서 유저유입을 페이지의 title 로 구분지어 파악할 수 있지만, 페이지의 title 이 모두 같아 유저의 유입이 정확히 파악할 수
+                      없는 문제 확인
+                    </li>
+                    <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                      <li>head 태그를 동적으로 조작할 수 있는 React-Helmet 라이브러리 적용</li>
+                      <li>
+                        <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
+                          title 태그와 meta 태그를 props 로 설정할 수 있는 컴포넌트 제작해 유저 유입 파악
+                          <Link />
+                        </a>
+                      </li>
+                    </ul>
 
-                  <li>React.memo, useCallback, useMemo 를 이용한 불필요한 리렌더링 관리</li>
-                  <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                    <li>React Delveloper Tools 로 불필요한 리렌더링을 감지</li>
-                    <li>컴포넌트, 함수, 변수를 기준으로 리액트 훅을 적절히 사용해 렌더링 비용 절감</li>
-                  </ul>
-                </div>
-              </ContentValue>
-            </Content>
-
-            <Content>
-              <ContentKey style={{ height: '340.57px' }}>
-                <h4>문제 해결 경험</h4>
-                {/* <h5>(문제 해결 경험)</h5> */}
-              </ContentKey>
-              <ContentValue>
-                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Infinite Scroll</span>
-                <li style={{ marginBottom: '0px', marginTop: '10px' }}>문제: 오래 걸리는 메인 페이지 초기 렌더링 시간(26,000ms)</li>
-                <li style={{ marginBottom: '0px' }}>
-                  원인: 1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈
-                </li>
-                <li>
-                  <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
-                    해결: Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 26000ms 의 로딩 속도를 1100ms 로 개선
-                    <Link />
-                  </a>
-                </li>
-                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SEO(검색 엔진 최적화)</span>
-                <li style={{ marginBottom: '0px', marginTop: '10px' }}>문제: 구글 애널리틱스에서 어려운 유저유입 파악</li>
-                <li style={{ marginBottom: '0px' }}>원인: 페이지들의 title 이 모두 같아 파악하는 데 어려움 존재</li>
-                <li>
-                  <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
-                    해결: SEO 개선 및 유저 유입 파악을 위해 fontWeight: 'bold' react-helmet 으로 페이지별 메타태그 설정 후, 구글 애널리틱스로 유저 유입 파악
-                    <Link />
-                  </a>
-                </li>
+                    {/* <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>터치 이벤트 장애 대응</div>
+                    <li style={{ marginTop: '10px' }}>
+                      메인 페이지의 얇은 가로 스크롤바 문제로 웹 환경에서 터치 이벤트 없이 스크롤바를 이용하기엔 UX적 문제 파악
+                    </li>
+                    <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
+                      <li>터치 이벤트가 내장되어 있는 Swiper 라이브러리 적용해 웹 환경에서도 드래그로 스크롤할 수 있게 구현</li>
+                    </ul> */}
+                  </ContentValue>
+                </Content>
               </ContentValue>
             </Content>
           </WorkExperienceItem>
 
-          <WorkExperienceItem style={{ marginTop: '50px' }}>
+          <WorkExperienceItem style={{ marginTop: '50px', borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
             <h3>
               <span>NNN(Next + Node + sNs)</span>
               <div>(2024.01 ~ 진행중)</div>
@@ -247,11 +342,11 @@ function Profile({}: Props) {
                   <Github />
                   Github
                 </a>
-                /
+                {/* /
                 <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
                   <Twiter />
                   Service
-                </a>
+                </a> */}
                 {/* /
                 <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
                   <Tistory />
@@ -267,8 +362,9 @@ function Profile({}: Props) {
                 <div style={{ fontSize: '16px' }}>React, Redux & Redux-Saga, Ant-Design, Styled-Components, SWR, AWS</div>
               </ContentValue>
             </Content>
+
             <Content>
-              <ContentKey style={{ height: '240.78px' }}>
+              <ContentKey style={{ height: '176px' }}>
                 <h4>수행 내용</h4>
               </ContentKey>
               <ContentValue>
@@ -457,32 +553,30 @@ const WorkExperienceItem = styled.div`
   }
 `;
 
-// const Table = styled.div`
-//   width: 100%;
-//   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   border-right: 1px solid hsla(0, 0%, 0%, 0.12);
-// `;
+const Table = styled.div`
+  width: 600px;
+  height: 30px;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-right: 1px solid hsla(0, 0%, 0%, 0.12);
+`;
 
-// const TableKey = styled.div`
-//   width: 100.886px;
-//   height: 45px;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   padding-left: 0px;
-//   text-align: left;
-//   padding-right: 1.08333rem;
-//   padding-left: 0.3rem;
+const TableKey = styled.div`
+  width: 100.886px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0px;
+  text-align: left;
+  padding-right: 1.08333rem;
+  padding-left: 0.3rem;
 
-//   font-weight: 600;
-//   border-left: 1px solid hsla(0, 0%, 0%, 0.12);
-// `;
+  border-left: 1px solid hsla(0, 0%, 0%, 0.12);
+`;
 const TableValue = styled.div`
   width: 100%;
-  height: 45px;
   font-family: Noto Sans KR, sans-serif;
   padding-left: 0.3rem;
   border-left: 1px solid hsla(0, 0%, 0%, 0.12);
@@ -508,34 +602,32 @@ const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 const ContentKey = styled.div`
-  min-width: 136px;
+  min-width: 103px;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   /* border-right: 1px solid hsla(0, 0%, 0%, 0.12); */
   h4 {
-    font-weight: 600;
+    /* font-weight: 600; */
+    font-size: 17px;
   }
 `;
 const ContentValue = styled.div`
   padding-left: 10px;
   font-size: 15px;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    /* margin-top: 10px; */
+  }
   li {
     margin-left: 15px;
-    margin-bottom: 10px;
-    font-weight: 300;
+    margin-top: 10px;
+    font-weight: 400;
     /* list-style-position: inside; */
     /* text-indent: -50px; */
-
-    li {
-      color: black;
-      border: 1px;
-      border-color: black;
-      margin-bottom: -5px;
-    }
   }
 `;

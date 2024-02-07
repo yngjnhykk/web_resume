@@ -16,12 +16,12 @@
 }
 
 .wrap {
-  max-width: 780px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 19.5px;
   padding-right: 19.5px;
-  font-weight: 300;
+  font-weight: 400;
   word-wrap: break-word;
   word-break: keep-all;
   line-height: 1.8;
