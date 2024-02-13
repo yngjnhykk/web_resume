@@ -6,6 +6,9 @@ import Tistory from '../../assets/icon/Tistory';
 import profileImage from '../../assets/profileImage.jpg';
 import serviceview from '../../assets/service_view.png';
 import carouselCode from '../../assets/carousel_code.png';
+import WeatherAPP1 from '../../assets/WeatherAPP1.png';
+import WeatherAPP2 from '../../assets/WeatherAPP2.png';
+import WeatherAPP3 from '../../assets/WeatherAPP3.png';
 import Link from '../../assets/icon/Link';
 
 type Props = {};
@@ -79,41 +82,30 @@ function Profile({}: Props) {
             </h3>
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>항해99 실전프로젝트 (FE2, BE4, DE1) / 팀 리더</div>
             <div style={{ marginTop: '10px' }}>쿠팡 Apple 제품의 Dynamic Pricing 을 추적해 최적의 구매 타이밍을 알려주는 검색 서비스</div>
-
+            <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
+              <a href='https://github.com/LowestPrice/LowestPrice-FE' target='_blank'>
+                <Github />
+                Github
+              </a>
+              /
+              <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/Apple-7b07d49a4b0640e9bfe3b10e9e275731' target='_blank'>
+                <Notion />
+                Portfolio
+              </a>
+              /
+              <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
+                <LowesPrice />
+                Service
+              </a>
+              /
+              <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
+                <Tistory />
+                회고
+              </a>
+            </TableValue>
             <Content style={{ gap: '30px' }}>
-              <ContentKey style={{ height: '2138px', width: '30%' }}>
-                <Content>
-                  <ContentValue>
-                    <h4>link</h4>
-                    <div>
-                      <TableValue style={{ border: 'none' }}>
-                        {' '}
-                        <a href='https://github.com/LowestPrice/LowestPrice-FE' target='_blank'>
-                          <Github />
-                          Github
-                        </a>
-                        /
-                        <a style={{ marginTop: '6.5px' }} href='https://www.notion.so/Apple-7b07d49a4b0640e9bfe3b10e9e275731' target='_blank'>
-                          <Notion />
-                          Portfolio
-                        </a>
-                      </TableValue>
-                      <TableValue style={{ border: 'none' }}>
-                        <a style={{ marginTop: '5px' }} href='https://lowest-price.store/' target='_blank'>
-                          <LowesPrice />
-                          Service
-                        </a>
-                        /
-                        <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
-                          <Tistory />
-                          회고
-                        </a>
-                      </TableValue>
-                    </div>
-                  </ContentValue>
-                </Content>
-
-                <Content style={{ marginTop: '50px' }}>
+              <ContentKey style={{ height: '2145px', width: '30%' }}>
+                <Content style={{ marginTop: 0 }}>
                   <ContentValue>
                     <h4>사용 기술</h4>
                     <li style={{ fontWeight: '500' }}>
@@ -174,20 +166,13 @@ function Profile({}: Props) {
                     </li>
                   </ContentValue>
                 </Content>
-                {/* <Content>
-                  <ContentKey>담당 기능</ContentKey>
-                  <ContentValue>
-                    <img src={myFeature}></img>
-                  </ContentValue>
-                </Content> */}
               </ContentKey>
               <ContentValue style={{ width: '70%' }}>
-                <Content>
-                  <ContentValue>
-                    <h4>Service View</h4>
-                    <img style={{ height: '280px', width: '800px' }} src={serviceview}></img>
-                  </ContentValue>
-                </Content>
+                <ContentValue>
+                  <h4>서비스 화면</h4>
+                  <img style={{ height: '280px', width: '800px' }} src={serviceview}></img>
+                </ContentValue>
+
                 <Content style={{ marginTop: '30px' }}>
                   <ContentValue>
                     <h4>수행 내용</h4>
@@ -325,6 +310,101 @@ function Profile({}: Props) {
           </WorkExperienceItem>
 
           <WorkExperienceItem style={{ marginTop: '50px', borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
+            <h3>
+              <span>Nice Weather</span>
+              <div>(2023.11 ~ 2023.12)</div>
+            </h3>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 프로젝트</div>
+            <div style={{ marginTop: '10px' }}>사용자의 현재 위치를 조회해 실시간 위치와 날씨정보를 알려주는 React Naitive 날씨 애플리케이션</div>
+            <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
+              <a href='https://github.com/yngjnhykk/WeatherAPP' target='_blank'>
+                <Github />
+                Github
+              </a>
+              {/* /
+                      <a style={{ marginTop: '5px' }} href='https://yngjnhyk.tistory.com/400' target='_blank'>
+                      <Tistory />
+                      회고
+                    </a> */}
+            </TableValue>
+
+            <Content>
+              <ContentKey style={{ width: '30%', height: 927 }}>
+                <ContentValue>
+                  <h4>사용 기술</h4>
+                  <li style={{ fontWeight: '500' }}>
+                    React Native
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>React JS 개발자의 입장으로 낮은 접근성으로 선택</li>
+                      <li style={{ marginBottom: '5px' }}>AOS, iOS 대응이 가능하고, Code Push 를 통해 앱스토어 심사 없이 버전 업데이트가 가능</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    TypeScript
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>interface 를 통한 데이터 타입 설정</li>
+                      <li style={{ marginBottom: '5px' }}>컴파일 타입 에러 슈팅 경험</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Expo
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>다양한 RN 지원 및 라이브러리와 간편한 세팅을 이유로 선택</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    react-native-dotenv
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>리액트네이티브에서 환경 변수를 관리하기 위해 선택</li>
+                      <li style={{ marginBottom: '5px' }}>
+                        react-native-dotenv 와 react-native-config 을 고민중 프로젝트의 규모가 크지 않다는 점에서 비교적 가벼운 react-native-dotenv 를 선택
+                      </li>
+                    </ul>
+                  </li>
+                </ContentValue>
+              </ContentKey>
+              <ContentValue style={{ width: '70%' }}>
+                <ContentValue>
+                  <h4>서비스 화면</h4>
+                  <img src={WeatherAPP1} style={{ height: '380px' }} />
+                  <img src={WeatherAPP2} style={{ height: '380px' }} />
+                  <img src={WeatherAPP3} style={{ height: '380px' }} />
+                </ContentValue>
+                <ContentValue style={{ marginTop: 30 }}>
+                  <h4>수행 내용</h4>
+                  <div>
+                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>동적 배경화면</span>
+                    <li style={{ marginTop: '10px' }}>
+                      날씨에 따라 변하는 배경화면 화면 및 아이콘
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                        <li>UI 개선를 위해 날씨에 따라 영향을 받는 css 효과를 고민하던 중, 다른 날씨앱에서도 자주 사용되는 동적 배경화면 기능을 선택</li>
+                        <li style={{ marginTop: '5px' }}>
+                          매력적인 인터페이스를 구현하고, Expo 프로젝트에서 gradient 효과를 사용하기 편리하고 일관성 있게 적용하기 위해 expo-linear-gradient
+                          선택
+                        </li>
+                      </ul>
+                    </li>
+
+                    <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>위치 기반 날씨 및 지리 정보 조회</div>
+                    <li style={{ marginTop: '10px' }}>
+                      사용자의 현재 위치정보와 날씨정보, 두 가지 데이터를 필요로 했음
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                        <li>
+                          사용자의 위치를 expo-location 을 통해 사용자의 gps 로 위치(위도, 경도)를 조회할수 있었고, 얻어진 위치를 기반으로 Openweathermaps API
+                          를 통해 날씨 정보를 조회
+                        </li>
+                        <li style={{ marginTop: '5px' }}>
+                          현재 위치를 숫자정보(위도, 경도)뿐 아니라 보다 직관적으로 알 수 있게 react-native-maps 로 현재위치를 알려주는 지도를 구현
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+                </ContentValue>
+              </ContentValue>
+            </Content>
+          </WorkExperienceItem>
+
+          <WorkExperienceItem style={{ marginTop: '50px', paddingTop: '50px', borderTop: '1px solid rgba(0, 0, 0, 0.12)' }}>
             <h3>
               <span>NNN(Next + Node + sNs)</span>
               <div>(2024.01 ~ 진행중)</div>
@@ -533,6 +613,7 @@ const WorkExperienceItem = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: 25px;
     /* color: #0687f0; */
     a {
       /* color: #0687f0; */
@@ -621,6 +702,7 @@ const ContentValue = styled.div`
   h4 {
     font-size: 20px;
     margin-bottom: 20px;
+    color: #2e2e2e;
     /* margin-top: 10px; */
   }
   li {
