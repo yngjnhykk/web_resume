@@ -9,6 +9,7 @@ import carouselCode from '../../assets/carousel_code.png';
 import WeatherAPP1 from '../../assets/WeatherAPP1.png';
 import WeatherAPP2 from '../../assets/WeatherAPP2.png';
 import WeatherAPP3 from '../../assets/WeatherAPP3.png';
+import WeatherAPP4 from '../../assets/WeatherAPP4.png';
 import Link from '../../assets/icon/Link';
 
 type Props = {};
@@ -369,6 +370,7 @@ function Profile({}: Props) {
                   <img src={WeatherAPP1} style={{ height: '380px' }} />
                   <img src={WeatherAPP2} style={{ height: '380px' }} />
                   <img src={WeatherAPP3} style={{ height: '380px' }} />
+                  <img src={WeatherAPP4} style={{ height: '380px' }} />
                 </ContentValue>
                 <ContentValue style={{ marginTop: 30 }}>
                   <h4>수행 내용</h4>
