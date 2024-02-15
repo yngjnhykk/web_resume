@@ -17,12 +17,13 @@ type Props = {};
 function Profile({}: Props) {
   return (
     <div>
-      <InfoArticle>
-        <Content style={{ position: 'relative' }}>
+      <Wrap>
+        <Content style={{ position: 'relative', display: 'flex', flexDirection: 'row', paddingTop: 60, alignItems: 'initial' }}>
+          <img style={{ height: '280px', borderRadius: 50 }} src={profileImage}></img>
           <TitleContent style={{ marginBottom: '20px', marginLeft: '50px' }}>
             <h1 style={{ fontSize: '40px', marginBottom: '10px' }}>양진혁</h1>
             <div style={{ fontSize: '22px' }}>프론트엔드 개발자</div>
-            <div style={{ marginTop: '10px', fontSize: '13px' }}>
+            <div style={{ marginTop: '10px', fontSize: '16px' }}>
               <div style={{ gap: '8px' }}></div>
               <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '2px', marginBottom: '10px', gap: '10px' }}>
                 <a href='https://yngjnhyk.tistory.com' target='_blank' style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -38,6 +39,16 @@ function Profile({}: Props) {
               <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
                 <li>Contact: 010-7518-2910</li>
               </div>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
+                <li style={{}}>
+                  관광학을 전공했고, 사람들을 도와주는 일을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
+                  <ul style={{ listStyle: 'none', marginLeft: 25 }}>
+                    <li>서비스를 제공하는 것에서 이젠 좋은 서비스를 만들고 싶어 개발자가 되려고 합니다.</li>
+                    <li>좋은 제품을 만들기 위해 유저의 상황에 몰입하여 최선의 방향을 고민하고, 적극적으로 커뮤니케이션합니다.</li>
+                    <li>유연하게 변화에 적응하며, 새로운 도전을 즐깁니다.</li>
+                  </ul>
+                </li>
+              </div>
               <li>
                 Skills
                 <ul style={{ listStyleType: 'circle', paddingLeft: '30px', fontWeight: '500' }}>
@@ -48,29 +59,7 @@ function Profile({}: Props) {
               </li>
             </div>
           </TitleContent>
-          <ContentKey style={{ minWidth: '200px', position: 'absolute', right: '50px', top: '55px' }}>
-            <img style={{ height: '280px' }} src={profileImage}></img>
-          </ContentKey>
         </Content>
-
-        <h2>
-          <div style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <div>Introduce</div>
-          </div>
-        </h2>
-        <WorkExperience style={{ paddingTop: '20px', paddingBottom: '20px' }}>
-          <p>
-            관광학을 전공했고, <span style={{ fontWeight: 'bold' }}>사람들을 도와주는 일</span>을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
-          </p>
-          <p>
-            서비스를 제공하는 것에서 이젠 <span style={{ fontWeight: 'bold' }}>좋은 서비스</span>를 만들고 싶어 개발자가 되려고 합니다.
-          </p>
-          <p>
-            개발 공부를 시작하면서 꾸준히 공부한 내용을 블로그로 작성하고 있습니다. 매일 Tech 설명회를 챙겨보며 유지보수가 쉽고 중복 없는 '좋은 코드' 에 대한
-            관점을 넓히기 위해 노력하고 있습니다.
-          </p>
-          <p>프론트엔드 개발자로 도전하는 결단력과 지속적인 학습 의지를 갖추어, 개발자에 대한 열망을 통해 미래에 더 나은 전문성을 쌓아가고자 합니다.</p>
-        </WorkExperience>
 
         <h2>
           <span>Projects Experience</span>
@@ -105,7 +94,7 @@ function Profile({}: Props) {
               </a>
             </TableValue>
             <Content style={{ gap: '30px' }}>
-              <ContentKey style={{ height: '2145px', width: '30%' }}>
+              <ContentKey style={{ height: '2261px', width: '30%' }}>
                 <Content style={{ marginTop: 0 }}>
                   <ContentValue>
                     <h4>사용 기술</h4>
@@ -171,7 +160,7 @@ function Profile({}: Props) {
               <ContentValue style={{ width: '70%' }}>
                 <ContentValue>
                   <h4>서비스 화면</h4>
-                  <img style={{ height: '280px', width: '800px' }} src={serviceview}></img>
+                  <img style={{ height: '280px', width: '780px' }} src={serviceview}></img>
                 </ContentValue>
 
                 <Content style={{ marginTop: '30px' }}>
@@ -226,7 +215,7 @@ function Profile({}: Props) {
                           </ul>
                         </ul>
                       </li>
-                      <img src={carouselCode} style={{ width: '750px', marginLeft: '37px' }} />
+                      <img src={carouselCode} style={{ width: '720px', marginLeft: '37px' }} />
 
                       <li style={{ marginTop: '20px' }}>
                         <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
@@ -330,7 +319,7 @@ function Profile({}: Props) {
             </TableValue>
 
             <Content>
-              <ContentKey style={{ width: '30%', height: 927 }}>
+              <ContentKey style={{ width: '30%', height: 1179 }}>
                 <ContentValue>
                   <h4>사용 기술</h4>
                   <li style={{ fontWeight: '500' }}>
@@ -367,10 +356,10 @@ function Profile({}: Props) {
               <ContentValue style={{ width: '70%' }}>
                 <ContentValue>
                   <h4>서비스 화면</h4>
-                  <img src={WeatherAPP1} style={{ height: '380px' }} />
-                  <img src={WeatherAPP2} style={{ height: '380px' }} />
-                  <img src={WeatherAPP3} style={{ height: '380px' }} />
-                  <img src={WeatherAPP4} style={{ height: '380px' }} />
+                  <img src={WeatherAPP1} style={{ height: '360px' }} />
+                  <img src={WeatherAPP2} style={{ height: '360px' }} />
+                  <img src={WeatherAPP3} style={{ height: '360px' }} />
+                  <img src={WeatherAPP4} style={{ height: '360px' }} />
                 </ContentValue>
                 <ContentValue style={{ marginTop: 30 }}>
                   <h4>수행 내용</h4>
@@ -402,6 +391,21 @@ function Profile({}: Props) {
                     </li>
                   </div>
                 </ContentValue>
+
+                <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>API_KEY 환경변수 적용</div>
+                <li style={{ marginTop: '10px' }}>
+                  날씨 정보를 조회하기 위해 Openweathermaps API 에서 사용자 고유의 API_KEY 를 사용해야 했음
+                  <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                    <li>
+                      하지만, React 와 달리 ReactNative 에서는 각 플랫폼(Android 및 iOS)에 대한 별도의 빌드 및 실행 환경이 필요하므로, 네이티브 모듈과
+                      상호작용할 때 더 많은 설정이 필요로 했음
+                    </li>
+                    <li style={{ marginTop: '5px' }}>
+                      ReactNative 에서 환경변수를 간편하게 관리하기 위해 react-native-dotenv 와 react-native-config 를 고민중 프로젝트의 규모가 크지 않다는 점을
+                      고려해 용량이 비교적 가벼운 react-native-dotenv 를 선택해서 API_KEY 보안 문제를 해결
+                    </li>
+                  </ul>
+                </li>
               </ContentValue>
             </Content>
           </WorkExperienceItem>
@@ -532,14 +536,14 @@ function Profile({}: Props) {
             </ContentValue>
           </Content>
         </WorkExperience>
-      </InfoArticle>
+      </Wrap>
     </div>
   );
 }
 // style = {{marginBottom: '0px'}}
 export default Profile;
 
-const InfoArticle = styled.div`
+const Wrap = styled.div`
   p {
     font: 100%/1.625 -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol';
@@ -569,7 +573,6 @@ const InfoArticle = styled.div`
 
 const TitleContent = styled.div`
   width: 100%;
-  padding-top: 60px;
   h1 {
     font: 100%/1.625 -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol';
@@ -705,12 +708,15 @@ const ContentValue = styled.div`
     font-size: 20px;
     margin-bottom: 20px;
     color: #2e2e2e;
+    background-color: #f2f2f2;
+    padding: 2px 5px;
     /* margin-top: 10px; */
   }
   li {
     margin-left: 15px;
     margin-top: 10px;
     font-weight: 400;
+    font-size: 16px;
     /* list-style-position: inside; */
     /* text-indent: -50px; */
   }
