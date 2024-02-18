@@ -6,6 +6,7 @@ import Tistory from '../../assets/icon/Tistory';
 import profileImage from '../../assets/profileImage.jpg';
 import serviceview from '../../assets/service_view.png';
 import carouselCode from '../../assets/carousel_code.png';
+import infiniteScroll from '../../assets/infiniteScroll.png';
 import WeatherAPP1 from '../../assets/WeatherAPP1.png';
 import WeatherAPP2 from '../../assets/WeatherAPP2.png';
 import WeatherAPP3 from '../../assets/WeatherAPP3.png';
@@ -156,6 +157,58 @@ function Profile({}: Props) {
                     </li>
                   </ContentValue>
                 </Content>
+                <Content>
+                  <ContentValue>
+                    <h4>담당 기능</h4>
+                    <li>
+                      메인 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>무한 스크롤</li>
+                        <li>제품 카테고리 및 필터링</li>
+                        <li>제품 알림 설정</li>
+                        <li>Carousel 기능</li>
+                        <li>최근 검색어</li>
+                        <li>Splash Screen 제작</li>
+                      </ul>
+                    </li>
+                    <li>
+                      검색 결과 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>무한 스크롤</li>
+                        <li>제품 카테고리 및 필터링</li>
+                        <li>제품 알림 설정</li>
+                      </ul>
+                    </li>
+                    <li>
+                      제품 상세 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>제품 옵션</li>
+                        <li>비슷한 제품 조회</li>
+                      </ul>
+                    </li>
+                    <li>
+                      알림 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>알림 제품 조회</li>
+                        <li>제품 알림 설정</li>
+                      </ul>
+                    </li>
+                    <li>
+                      로그인 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>소셜 로그인(kakao SDK)</li>
+                        <li>자동 로그인(refresh token)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      MY 페이지
+                      <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                        <li>프로필 수정</li>
+                        <li>회원 탈퇴</li>
+                      </ul>
+                    </li>
+                  </ContentValue>
+                </Content>
               </ContentKey>
               <ContentValue style={{ width: '70%' }}>
                 <ContentValue>
@@ -165,18 +218,50 @@ function Profile({}: Props) {
 
                 <Content style={{ marginTop: '30px' }}>
                   <ContentValue>
-                    <h4>수행 내용</h4>
+                    <h4>문제 해결 경험</h4>
                     <div>
-                      <span style={{ fontWeight: 'bold', fontSize: '16px' }}>프론트엔드 개발</span>
-                      <li style={{ marginTop: '10px' }}>페이지 제작 기여도 70% (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 반응형 제작)</li>
+                      <span style={{ fontWeight: 'bold', fontSize: '16px' }}>로그인 보안 문제 해결</span>
+                      {/* <li style={{ marginTop: '10px' }}>페이지 제작 기여도 70% (메인, 제품상세, 검색결과, 로그인, 유저정보, 알림페이지 반응형 제작)</li> */}
 
-                      <li style={{ marginTop: '20px' }}>
+                      {/* <li style={{ marginTop: '20px' }}>
                         전체 기능 로직 60% 구현 (로그인, 마이페이지, 상품 검색/필터/옵션/정렬, 최근 검색어, 알림설정/취소 등)
                       </li>
 
-                      <li style={{ marginTop: '20px' }}> Splash Screen 제작 및 refresh Token 을 이용한 자동로그인 구현 </li>
+                      <li style={{ marginTop: '20px' }}> Splash Screen 제작 및 refresh Token 을 이용한 자동로그인 구현 </li> */}
+                      <li>
+                        고민: 백엔드에서는 토큰 상태를 제어하기 힘들어서 탈취를 비롯한 보안문제가 생길 수 있다고 판단
+                        <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                          <li>해결 노력: 프론트에서 token 을 관리하기로 결정하고, 다음과 같이 해결</li>
+                          <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', marginLeft: 10, marginTop: 10 }}>
+                            <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>refreshToken</TableValue>
+                            <TableKey style={{ width: '30%' }}>이틀, 만료기간 설정</TableKey>
+                            <TableKey style={{ width: '40%' }}>탈취되어도 소멸 후 재발급 불가</TableKey>
+                          </Table>
+                          <Table style={{ marginLeft: 10 }}>
+                            <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>accessToken</TableValue>
+                            <TableKey style={{ width: '30%' }}>3시간, 만료기간 설정</TableKey>
+                            <TableKey style={{ width: '40%' }}>짧은 유효기간으로 금방 유효성 소멸</TableKey>
+                          </Table>
+                          <Table style={{ marginLeft: 10 }}>
+                            <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>HttpOnly</TableValue>
+                            <TableKey style={{ width: '30%' }}>true</TableKey>
+                            <TableKey style={{ width: '40%' }}>자바스크립트에서 쿠키에 접근 불가</TableKey>
+                          </Table>
+                          <Table style={{ marginLeft: 10 }}>
+                            <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>SameSite</TableValue>
+                            <TableKey style={{ width: '30%' }}>true</TableKey>
+                            <TableKey style={{ width: '40%' }}>HTTPS 에서만 쿠키 전송 가능</TableKey>
+                          </Table>
+                          <Table style={{ marginLeft: 10 }}>
+                            <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>Secure</TableValue>
+                            <TableKey style={{ width: '30%' }}>Strict</TableKey>
+                            <TableKey style={{ width: '40%' }}>CSRF 공격 방어</TableKey>
+                          </Table>
+                          <li>성과: httpOnly, secure, sameSite 설정 등으로 보안에 취약할 수 있던 JWT 토큰의 안전성을 향상시킬 수 있었음</li>
+                        </ul>
+                      </li>
 
-                      <li style={{ marginTop: '20px' }}>
+                      {/* <li style={{ marginTop: '20px' }}>
                         <a href='https://yngjnhyk.tistory.com/399' target='_blank' style={{}}>
                           GitHub Actions 를 통한 배포 자동화 (Amazon S3)
                           <Link />
@@ -187,37 +272,50 @@ function Profile({}: Props) {
                             별도의 서버 설치 없이 GitHub 통합으로 적용이 간편한 Github Action 선택해 자동화로 비용과 시간을 절감
                           </li>
                         </ul>
-                      </li>
+                      </li> */}
 
-                      <li style={{ marginTop: '20px' }}>
+                      {/* <li style={{ marginTop: '20px' }}>
                         <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
                           소셜 로그인(kakao) 기능 구현(SDK)
                           <Link />
                         </a>
                         <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
-                          <li>유저 개인정보를 필요로 하는 알림톡 기능을 위해 소셜로그인으로 카카오를 선정</li>
+                          <li>유저 개인정보(전화번호)를 필요로 하는 알림톡 기능을 위해 소셜로그인으로 카카오를 선정</li>
                           <li style={{ marginTop: '5px' }}>
                             Rest API 와 SDK 방식 중 프로젝트 규모가 크지 않고, 사용에 편리해 SDK 방식을 선택했고, 편리하게 사용자 정보(전화번호)를 얻어 UX 개선
                           </li>
                         </ul>
-                      </li>
-
-                      <li style={{ marginTop: '20px' }}>
+                      </li> */}
+                      <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 10 }}>의존성 없는 Carousel 구현</div>
+                      <li>
                         <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
-                          pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현
+                          pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현하면서 1)툭툭 끊기는 애니메이션과 2)자동 슬라이드와 버튼 클릭 충돌 등 두 가지
+                          문제가 있었음
                           <Link />
                         </a>
                         <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                          <li>메인페이지에서 할인율이 높은 순위에 있는 제품들을 Carousel 로 보여주어야 하는 feature 가 있었음</li>
-                          <ul style={{ listStyle: 'square', marginLeft: '40px' }}>
-                            <li>css 속성인 translateX 를 통해 animation 효과를 줄 수 있었고, content 마다 index 에 삼항연산자를 적용해 carousel 기능을 구현</li>
-                            <li>React Hook 인 useEffect 와 setTimeout 을 통해 content 가 자동으로 넘어갈 수 있게 UI적 성과를 얻음</li>
+                          <li>
+                            고민: 자동 슬라이드 중 버튼을 클릭하면 인덱스가 예상치 못하게 변경되는 문제가 있었고, 이는 자동 슬라이드 동작 중에도 사용자의 버튼
+                            클릭이 즉시 반영되어 두 기능의 충돌이 발생한 것으로 판단
+                          </li>
+                          <ul style={{ listStyleType: 'square', marginLeft: 40 }}>
+                            <li>해결 노력: 충돌을 막기 위해 isSlide 라는 상태를 도입해 슬라이드 중인 동안은 조건문을 통해 좌우 버튼 클릭을 무시하도록 설정</li>
+                          </ul>
+                          <li>
+                            고민: 슬라이드 이동 시 애니메이션을 적용하고자 했으나, 애니메이션 중에도 인덱스와 위치를 업데이트해야 했습니다. 이로 인해 애니메이션
+                            중에도 슬라이드가 일어나야 하는데, 이를 어떻게 자연스럽게 처리할지가 고민
+                          </li>
+                          <ul style={{ listStyleType: 'square', marginLeft: 40 }}>
+                            <li>
+                              해결 노력: setTimeout 함수를 활용하여 일정 시간이 지난 후에 인덱스 및 슬라이드 위치를 업데이트하도록 구현했습니다. 애니메이션이
+                              완료된 후에 해당 코드가 실행되어 자연스러운 전환이 가능하도록 구현
+                            </li>
                           </ul>
                         </ul>
                       </li>
                       <img src={carouselCode} style={{ width: '720px', marginLeft: '37px' }} />
 
-                      <li style={{ marginTop: '20px' }}>
+                      {/* <li style={{ marginTop: '20px' }}>
                         <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
                           신규 유저 유입 분석을 위해 웹 어플리케이션과 Google Analytics 연동으로 데이터 시각화
                           <Link />
@@ -227,8 +325,8 @@ function Profile({}: Props) {
                       <li style={{ marginTop: '20px' }}>
                         <span style={{ fontWeight: 'bold' }}></span>시멘틱 태그와 <span style={{ fontWeight: 'bold' }}></span>aria-label 등을 이용해 웹 접근성
                         개선
-                      </li>
-
+                      </li> */}
+                      {/* 
                       <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>성능 최적화</div>
                       <li style={{ marginTop: '10px' }}>
                         <a href='https://yngjnhyk.tistory.com/396' target='_blank'>
@@ -241,21 +339,28 @@ function Profile({}: Props) {
                       <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
                         <li>React Delveloper Tools 로 불필요한 리렌더링을 감지</li>
                         <li>컴포넌트, 함수, 변수를 기준으로 리액트 훅을 적절히 사용해 렌더링 비용 절감</li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </ContentValue>
                 </Content>
 
                 <Content style={{ marginTop: '30px' }}>
                   <ContentValue>
-                    <h4>문제 해결 경험</h4>
                     <span style={{ fontWeight: 'bold', fontSize: '16px' }}>성능 문제 해결</span>
-                    <li style={{ marginTop: '10px' }}>MVP 구현 이후 첫 페이지 로딩 시간이 평균 26,000ms로 너무 느렸고, UX적 문제가 된다고 판단</li>
+                    <li style={{ marginTop: '10px' }}>
+                      고민: 프로젝트의 MVP를 구현 이후, 첫 페이지 로딩 시간이 평균 26,000ms로 매우 느려 UX적 문제가 된다고 판단했고, 특히 1,000개 이상의
+                      데이터를 처음 렌더링하는 메인 페이지에서 초기 렌더링 시간이 길어진 것이 주요 문제원인으로 확인
+                    </li>
                     <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                      <li>1,000개 이상의 데이터를 가장 처음 렌더링되는 메인 페이지에서 불러오면서 생긴 초기 렌더링 시간 이슈 확인</li>
+                      <li>
+                        해결 노력: React-Query의 Infinite Queries를 도입하여, 스크롤이 내려갈 때, Observer 가 Viewpoint 와 ref 간 Intersection 을 감지해
+                        자동으로 새로운 페이지의 데이터를 서버에서 가져오도록 구현해서 해결
+                      </li>
+                      <img src={infiniteScroll} style={{ width: '720px' }} />
+
                       <li>
                         <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
-                          Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 26000ms &rarr; 1100ms 로 개선
+                          성과: Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 로딩 시간 개선
                           <Link />
                         </a>
                       </li>
@@ -271,7 +376,7 @@ function Profile({}: Props) {
                       <TableKey style={{ width: '33%' }}>95.77%</TableKey>
                     </Table>
 
-                    <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>유저 유입 파악</div>
+                    {/* <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>유저 유입 파악</div>
                     <li style={{ marginTop: '10px' }}>
                       구글 애널리틱스에서 유저유입을 페이지의 title 로 구분지어 파악할 수 있지만, 페이지의 title 이 모두 같아 유저의 유입이 정확히 파악할 수
                       없는 문제 확인
@@ -284,7 +389,7 @@ function Profile({}: Props) {
                           <Link />
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
 
                     {/* <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>터치 이벤트 장애 대응</div>
                     <li style={{ marginTop: '10px' }}>
@@ -302,7 +407,7 @@ function Profile({}: Props) {
           <WorkExperienceItem style={{ marginTop: '50px', borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
             <h3>
               <span>Nice Weather</span>
-              <div>(2023.11 ~ 2023.12)</div>
+              <div>(2023.12 ~ 진행중)</div>
             </h3>
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 프로젝트</div>
             <div style={{ marginTop: '10px' }}>사용자의 현재 위치를 조회해 실시간 위치와 날씨정보를 알려주는 React Naitive 날씨 애플리케이션</div>
@@ -640,7 +745,7 @@ const WorkExperienceItem = styled.div`
 `;
 
 const Table = styled.div`
-  width: 600px;
+  width: 700px;
   height: 30px;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   display: flex;
