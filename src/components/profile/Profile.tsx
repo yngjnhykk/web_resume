@@ -42,11 +42,11 @@ function Profile({}: Props) {
               </div>
               <div style={{ display: 'flex', flexDirection: 'row', gap: '4px', alignItems: 'center' }}>
                 <li style={{}}>
-                  관광학을 전공했고, 사람들을 도와주는 일을 하고 싶어 호텔, 국내여행가이드 일을 했습니다.
+                  TypeScript, React 기반의 웹 프론트엔드 개발자입니다.
                   <ul style={{ listStyle: 'none', marginLeft: 25 }}>
-                    <li>서비스를 제공하는 것에서 이젠 좋은 서비스를 만들고 싶어 개발자가 되려고 합니다.</li>
-                    <li>좋은 제품을 만들기 위해 유저의 상황에 몰입하여 최선의 방향을 고민하고, 적극적으로 커뮤니케이션합니다.</li>
-                    <li>유연하게 변화에 적응하며, 새로운 도전을 즐깁니다.</li>
+                    <li>Redux, React-Query, CSS-in-JS 활용에 익숙합니다.</li>
+                    <li>동작 원리에 대한 지속적인 호기심과 갈증은 도전을 즐기게 하고, 제 개발 능력을 높이는 큰 원동력이 됩니다.</li>
+                    <li>수년간 서비스 분야에 있으면서 대면/서면 의사소통에 능합니다.</li>
                   </ul>
                 </li>
               </div>
@@ -137,7 +137,7 @@ function Profile({}: Props) {
                     <li style={{ fontWeight: '500' }}>
                       Swiper
                       <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                        <li style={{ marginBottom: '5px' }}>모바일 환경에서의 터치 이벤트에 잘 반응하는 Slider 를 표현하기 위해 선택</li>
+                        <li style={{ marginBottom: '5px' }}>모바일 환경처럼 웹 환경에서도 터치 이벤트가 적용된 가로스크롤을 구현하기 위해 선택</li>
                       </ul>
                     </li>
                     <li style={{ fontWeight: '500' }}>
@@ -163,10 +163,20 @@ function Profile({}: Props) {
                     <li>
                       메인 페이지
                       <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                        <li>무한 스크롤</li>
+                        <li>
+                          <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
+                            무한 스크롤
+                            <Link />
+                          </a>
+                        </li>
                         <li>제품 카테고리 및 필터링</li>
                         <li>제품 알림 설정</li>
-                        <li>Carousel 기능</li>
+                        <li>
+                          <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
+                            Carousel 기능
+                            <Link />
+                          </a>
+                        </li>
                         <li>최근 검색어</li>
                         <li>Splash Screen 제작</li>
                       </ul>
@@ -174,7 +184,12 @@ function Profile({}: Props) {
                     <li>
                       검색 결과 페이지
                       <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                        <li>무한 스크롤</li>
+                        <li>
+                          <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
+                            무한 스크롤
+                            <Link />
+                          </a>
+                        </li>
                         <li>제품 카테고리 및 필터링</li>
                         <li>제품 알림 설정</li>
                       </ul>
@@ -196,7 +211,12 @@ function Profile({}: Props) {
                     <li>
                       로그인 페이지
                       <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                        <li>소셜 로그인(kakao SDK)</li>
+                        <li>
+                          <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
+                            소셜 로그인(kakao) 기능 구현(SDK)
+                            <Link />
+                          </a>
+                        </li>
                         <li>자동 로그인(refresh token)</li>
                       </ul>
                     </li>
@@ -288,11 +308,9 @@ function Profile({}: Props) {
                       </li> */}
                       <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 10 }}>의존성 없는 Carousel 구현</div>
                       <li>
-                        <a href='https://yngjnhyk.tistory.com/391' target='_blank' style={{ marginTop: '0px' }}>
-                          pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현하면서 1)툭툭 끊기는 애니메이션과 2)자동 슬라이드와 버튼 클릭 충돌 등 두 가지
-                          문제가 있었음
-                          <Link />
-                        </a>
+                        할인율이 높은 제품을 유연하게 유저에게 부각시키기 위해 레퍼런스를 찾던 중 carousel 기능을 알게 되었고, 라이브러리를 사용하기 전,
+                        동작원리에 대한 호기심으로 pure Javascript 와 CSS 로 의존성 없이 Carousel 기능 구현하면서 1)툭툭 끊기는 애니메이션과 2)자동 슬라이드와
+                        버튼 클릭 충돌 등 두 가지 문제가 있었음
                         <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
                           <li>
                             고민: 자동 슬라이드 중 버튼을 클릭하면 인덱스가 예상치 못하게 변경되는 문제가 있었고, 이는 자동 슬라이드 동작 중에도 사용자의 버튼
@@ -302,13 +320,13 @@ function Profile({}: Props) {
                             <li>해결 노력: 충돌을 막기 위해 isSlide 라는 상태를 도입해 슬라이드 중인 동안은 조건문을 통해 좌우 버튼 클릭을 무시하도록 설정</li>
                           </ul>
                           <li>
-                            고민: 슬라이드 이동 시 애니메이션을 적용하고자 했으나, 애니메이션 중에도 인덱스와 위치를 업데이트해야 했습니다. 이로 인해 애니메이션
-                            중에도 슬라이드가 일어나야 하는데, 이를 어떻게 자연스럽게 처리할지가 고민
+                            고민: 슬라이드 이동 시 애니메이션을 적용하고자 했으나, 애니메이션 중에도 인덱스와 위치를 업데이트가 필요하다고 판단. 이로 인해
+                            애니메이션 중에도 슬라이드가 일어나야 하는데, 이를 어떻게 자연스럽게 처리할지가 고민
                           </li>
                           <ul style={{ listStyleType: 'square', marginLeft: 40 }}>
                             <li>
-                              해결 노력: setTimeout 함수를 활용하여 일정 시간이 지난 후에 인덱스 및 슬라이드 위치를 업데이트하도록 구현했습니다. 애니메이션이
-                              완료된 후에 해당 코드가 실행되어 자연스러운 전환이 가능하도록 구현
+                              해결 노력: setTimeout 함수를 활용하여 일정 시간이 지난 후에 인덱스 및 슬라이드 위치를 업데이트하도록 구현. 애니메이션이 완료된
+                              후에 해당 코드가 실행되어 자연스러운 전환이 가능하도록 구현
                             </li>
                           </ul>
                         </ul>
@@ -358,12 +376,7 @@ function Profile({}: Props) {
                       </li>
                       <img src={infiniteScroll} style={{ width: '720px' }} />
 
-                      <li>
-                        <a href='https://yngjnhyk.tistory.com/393' target='_blank'>
-                          성과: Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 로딩 시간 개선
-                          <Link />
-                        </a>
-                      </li>
+                      <li>성과: Intersection Observer 와 react-query 의 useInfinitequery 를 사용해 Lazy Loading 을 구현해 로딩 시간 개선</li>
                     </ul>
                     <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', backgroundColor: '#EFEFEF', marginLeft: '50px' }}>
                       <TableValue style={{ width: '33%' }}>before</TableValue>
