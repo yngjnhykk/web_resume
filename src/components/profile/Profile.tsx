@@ -331,7 +331,7 @@ function Profile({}: Props) {
                           </ul>
                         </ul>
                       </li>
-                      <img src={carouselCode} style={{ width: '720px', marginLeft: '37px' }} />
+                      <img src={carouselCode} style={{ width: '720px', marginLeft: '37px', marginTop: 10 }} />
 
                       {/* <li style={{ marginTop: '20px' }}>
                         <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
@@ -388,29 +388,44 @@ function Profile({}: Props) {
                       <TableKey style={{ width: '33%' }}>1100ms</TableKey>
                       <TableKey style={{ width: '33%' }}>95.77%</TableKey>
                     </Table>
-
-                    {/* <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>유저 유입 파악</div>
-                    <li style={{ marginTop: '10px' }}>
-                      구글 애널리틱스에서 유저유입을 페이지의 title 로 구분지어 파악할 수 있지만, 페이지의 title 이 모두 같아 유저의 유입이 정확히 파악할 수
-                      없는 문제 확인
+                  </ContentValue>
+                </Content>
+                <Content style={{ marginTop: 30 }}>
+                  <ContentValue>
+                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>비회원의 자동로그인</span>
+                    <li>
+                      고민: 자동로그인 구현을 위해 처음엔 해당 유저가 회원인지 아닌지를 Axios Interceptor 로 구별하기 위해 모든 API 에서 refresh token 을 API
+                      body 에 포함시켰으나, 제품을 판매하는 서비스 특성상 회원과 비회원 유저 모두가 이용할 수 있는 서비스이기에 token 을 보유하지 않아도 제품을
+                      조회하거나 검색하는 등 서비스를 이용할 수 있어야 했음
                     </li>
-                    <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                      <li>head 태그를 동적으로 조작할 수 있는 React-Helmet 라이브러리 적용</li>
+                    <ul style={{ listStyleType: 'circle', marginLeft: 40 }}>
                       <li>
-                        <a href='https://lookerstudio.google.com/embed/reporting/5de3b9a8-b75f-4b4e-9d48-e0bfd57aeb7e/page/4VDGB' target='_blank'>
-                          title 태그와 meta 태그를 props 로 설정할 수 있는 컴포넌트 제작해 유저 유입 파악
-                          <Link />
-                        </a>
+                        해결 노력: 비회원 유저도 서비스를 이용할 수 있도록 Axios Interceptor 로 회원인지를 판단하는 것이 아닌 프론트에서 회원만 가능한 기능으로
+                        한정해 중첩 조건문으로 해당 유저가 access token 을 갖고 있는지(로그인 한 회원인지), refresh token 을 갖고 있는지(로그인 하지 않는
+                        회원인지), 비회원인지(token 을 보유하지 않았는지)등 유효성 검사를 통해 적절한 로직으로 자동로그인을 구현할 수 있었음
                       </li>
-                    </ul> */}
 
-                    {/* <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '30px' }}>터치 이벤트 장애 대응</div>
-                    <li style={{ marginTop: '10px' }}>
-                      메인 페이지의 얇은 가로 스크롤바 문제로 웹 환경에서 터치 이벤트 없이 스크롤바를 이용하기엔 UX적 문제 파악
-                    </li>
-                    <ul style={{ listStyle: 'circle', marginLeft: '40px' }}>
-                      <li>터치 이벤트가 내장되어 있는 Swiper 라이브러리 적용해 웹 환경에서도 드래그로 스크롤할 수 있게 구현</li>
-                    </ul> */}
+                      <Table style={{ borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', marginLeft: 10, marginTop: 10, width: 800 }}>
+                        <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF', textIndent: -9999 }}>sss</TableValue>
+                        <TableKey style={{ width: '30%' }}>보유했다면,</TableKey>
+                        <TableKey style={{ width: '40%' }}>보유하지 않았다면,</TableKey>
+                      </Table>
+                      <Table style={{ marginLeft: 10, width: 800 }}>
+                        <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF' }}>accessToken</TableValue>
+                        <TableKey style={{ width: '30%', height: '100%' }}>로그인 한 회원 유저 &rarr; 정상 진행</TableKey>
+                        <TableKey style={{ width: '40%', textIndent: -9999 }}> &darr;</TableKey>
+                      </Table>
+                      <Table style={{ marginLeft: 10, width: 800, height: 50 }}>
+                        <TableValue style={{ width: '30%', backgroundColor: '#EFEFEF', height: 50 }}>refreshToken</TableValue>
+                        <TableKey style={{ width: '30%' }}>accessToken 이 만료된 회원 유저 &rarr; accessToken 발급 후, 정상 진행</TableKey>
+                        <TableKey style={{ width: '40%' }}>
+                          비회원 유저 &rarr; Toastify 알림 전송
+                          <br />
+                          ("로그인 후 이용가능합니다.")
+                        </TableKey>
+                      </Table>
+                      <li>성과: 회원전용 서비스에 대한 접근을 효과적으로 제어하고, 불필요한 데이터(API body) 를 줄이면서, 전반적인 시스템 보안성을 향상</li>
+                    </ul>
                   </ContentValue>
                 </Content>
               </ContentValue>
@@ -776,7 +791,6 @@ const TableKey = styled.div`
   text-align: left;
   padding-right: 1.08333rem;
   padding-left: 0.3rem;
-
   border-left: 1px solid hsla(0, 0%, 0%, 0.12);
 `;
 const TableValue = styled.div`
@@ -790,6 +804,7 @@ const TableValue = styled.div`
   align-items: center;
   gap: 10px;
   font-size: 15px;
+  height: 30px;
   a {
     text-decoration: underline;
     font-size: 13px;
