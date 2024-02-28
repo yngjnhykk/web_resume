@@ -15,7 +15,7 @@ import NNN_SERVIVE_VIEW1 from '../../assets/[NNN]service_view1.png';
 import NNN_SERVIVE_VIEW2 from '../../assets/[NNN]service_view2.png';
 import NNN_SERVIVE_VIEW3 from '../../assets/[NNN]service_view3.png';
 import NNN_trouble_shooting1 from '../../assets/[NNN]trouble_shooting1.png';
-import NNN_trouble_shooting2 from '../../assets/[NNN]trouble_shooting2.png';
+// import NNN_trouble_shooting2 from '../../assets/[NNN]trouble_shooting2.png';
 import NNN_trouble_shooting3 from '../../assets/[NNN]trouble_shooting3.png';
 import Link from '../../assets/icon/Link';
 
@@ -443,7 +443,7 @@ function Profile({}: Props) {
               <span>Nice Weather</span>
               <div>(2023.12 ~ 진행중)</div>
             </h3>
-            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 프로젝트</div>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 React Native 프로젝트</div>
             <div style={{ marginTop: '10px' }}>사용자의 현재 위치를 조회해 실시간 위치와 날씨정보를 알려주는 React Naitive 날씨 애플리케이션</div>
             <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
               <a href='https://github.com/yngjnhykk/WeatherAPP' target='_blank'>
@@ -554,7 +554,7 @@ function Profile({}: Props) {
               <span>NNN(Next + Node + sNs)</span>
               <div>(2024.01 ~ 진행중)</div>
             </h3>
-            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 프로젝트</div>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 Full Stack 프로젝트</div>
             <div style={{ marginTop: '10px' }}>Next.js + Node.js 로 구현한 SNS 서비스</div>
             <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
               <a href='https://github.com/orgs/NodeNextsNs/repositories' target='_blank'>
@@ -592,21 +592,13 @@ function Profile({}: Props) {
                   <li style={{ fontWeight: '500' }}>
                     Styled Components
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>다양한 RN 지원 및 라이브러리와 간편한 세팅을 이유로 선택</li>
+                      <li style={{ marginBottom: '5px' }}>props 연동을 통해 조건부 스타일링 및 동적 스타일링이 가능</li>
                     </ul>
                   </li>
                   <li style={{ fontWeight: '500' }}>
                     Ant Design
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
                       <li style={{ marginBottom: '5px' }}>쉬운 반응형 페이지와 기능에 집중하기 위해 ant-desogn 라이브러리 사용</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    SWR
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>
-                        늘어나는 액션에 고통받고, 데이터 관리 및 서버 통신을 더욱 간편하게 구현하기 위해 단순히 조회 API 에 SWR을 활용
-                      </li>
                     </ul>
                   </li>
 
