@@ -15,6 +15,7 @@ import NNN_SERVIVE_VIEW1 from '../../assets/[NNN]service_view1.png';
 import NNN_SERVIVE_VIEW2 from '../../assets/[NNN]service_view2.png';
 import NNN_SERVIVE_VIEW3 from '../../assets/[NNN]service_view3.png';
 import NNN_trouble_shooting1 from '../../assets/[NNN]trouble_shooting1.png';
+import NNN_trouble_shooting2 from '../../assets/[NNN]trouble_shooting2.png';
 import NNN_trouble_shooting3 from '../../assets/[NNN]trouble_shooting3.png';
 import Link from '../../assets/icon/Link';
 
@@ -217,7 +218,7 @@ function Profile({}: Props) {
                       로그인 페이지
                       <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
                         <li>
-                          <a href='https://yngjnhyk.tistory.com/401' target='_blank' style={{}}>
+                          <a href='https://yngjnhyk.tistory.com/401' target='_blank'>
                             소셜 로그인(kakao) 기능 구현(SDK)
                             <Link />
                           </a>
@@ -562,7 +563,7 @@ function Profile({}: Props) {
               </a>
             </TableValue>
             <Content>
-              <ContentKey style={{ width: '30%', height: 2157 }}>
+              <ContentKey style={{ width: '30%', height: 2447 }}>
                 <ContentValue>
                   <h4>사용 기술</h4>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Frontend</span>
@@ -622,14 +623,14 @@ function Profile({}: Props) {
                   <li style={{ fontWeight: '500' }}>
                     Sequelize(MySQL)
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>Sequelize를 통한 모델 정의 및 관리</li>
-                      <li style={{ marginBottom: '5px' }}>
-                        react-native-dotenv 와 react-native-config 을 고민중 프로젝트의 규모가 크지 않다는 점에서 비교적 가벼운 react-native-dotenv 를 선택
-                      </li>
+                      <li style={{ marginBottom: '5px' }}>Sequelize를 통한 모델 정의 및 관계 설정</li>
                     </ul>
                   </li>
                   <li style={{ fontWeight: '500' }}>
-                    Passport & Passport-local
+                    <a target='_blank' href='https://yngjnhyk.tistory.com/412'>
+                      Passport & Passport-local
+                      <Link />
+                    </a>
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
                       <li style={{ marginBottom: '5px' }}>Local strategy를 활용하여 사용자 정보를 데이터베이스에서 인증</li>
                       <li style={{ marginBottom: '5px' }}>로그인 후에는 세션을 유지하고, 사용자 정보를 직렬화 및 역직렬화하여 유지</li>
@@ -641,7 +642,7 @@ function Profile({}: Props) {
                     Multer
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
                       <li style={{ marginBottom: '5px' }}>이미지 업로드를 위해 Multer 도입 및 설정</li>
-                      <li style={{ marginBottom: '5px' }}>업로드 시간으로 이미지 파일명의 로중복을 방지</li>
+                      <li style={{ marginBottom: '5px' }}>업로드 시간으로 이미지 파일명의 중복을 방지</li>
                     </ul>
                   </li>
                 </ContentValue>
@@ -686,7 +687,12 @@ function Profile({}: Props) {
                 <ContentValue style={{ marginTop: 30 }}>
                   <h4>문제 해결 경험</h4>
                   <div>
-                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SSR 환경에서 쿠키 공유</span>
+                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>
+                      <a target='_blank' href='https://yngjnhyk.tistory.com/426'>
+                        SSR 환경에서 데이터 흐름
+                        <Link />
+                      </a>
+                    </span>
                     <li style={{ marginTop: '10px' }}>
                       고민: 유저정보가 담긴 쿠키를 GET 요청시 함께 보내기 위한 방법으로 백엔드에서 브라우저 session 에 담아 서버에서 쿠키를 받을 수 있었지만,
                       SSR 을 구현하고 난 뒤, 쿠키를 전송하지 못하는 문제를 확인
@@ -710,9 +716,12 @@ function Profile({}: Props) {
                       <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
                         <li>
                           해결 노력: 게시글 조회 요청을 관리하는 상태인 불리언 상태, hasMorePosts 를 만들어 불러온 게시글의 갯수가 10개 아니라면, 더 이상
-                          조회하지 않도록 트리거를 만듬. 하지만, 만약 게시글의 갯수가 10의 배수이고, 남은 갯수의 게시글이 10개라면, 마지막 게시글인줄 모르고,
-                          조회를 요청하게 되는데, 그렇다하더라도, 더 이상 불러올 데이터가 없기에 한 번의 데이터 요청 낭비가 발생하겠지만, 어떤 데이터도 더 이상
-                          조회하지 않아 에러를 막을 수 있었음
+                          조회하지 않도록 트리거를 만듬
+                          {/* <img src={NNN_trouble_shooting2} style={{ width: 620 }} />
+                          <br /> */}
+                          하지만, 만약 게시글의 갯수가 10의 배수이고, 남은 갯수의 게시글이 10개라면, 마지막 게시글인줄 모르고, 조회를 요청하게 되는데,
+                          그렇다하더라도, 더 이상 불러올 데이터가 없기에 한 번의 데이터 요청 낭비가 발생하겠지만, 어떤 데이터도 더 이상 조회하지 않아 에러를
+                          막을 수 있었음
                         </li>
                         <li>성과: 데이터 요청이 한 번 낭비되었지만, 적절한 트리거로 Infinite Scroll 구현</li>
                       </ul>
@@ -720,7 +729,12 @@ function Profile({}: Props) {
                   </div>
                 </ContentValue>
 
-                <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>게시글 포스팅 lazy loading</div>
+                <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>
+                  <a target='_blank' href='https://yngjnhyk.tistory.com/416'>
+                    게시글 포스팅 lazy loading
+                    <Link />
+                  </a>
+                </div>
                 <li style={{ marginTop: '10px' }}>
                   고민: 게시글을 포스팅하는 과정에서 이미지와 텍스트를 서버로 함께 보내면서 시간이 오래 걸려 고민
                   <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
