@@ -174,7 +174,9 @@ function Profile({}: Props) {
                 </Content>
                 <Content>
                   <ContentValue>
-                    <h4>담당 기능</h4>
+                    <h4 style={{ position: 'relative' }}>
+                      담당 기능 <span style={{ position: 'absolute', right: 6, bottom: 3, fontSize: 13 }}>(기여도-70%)</span>
+                    </h4>
                     <li>
                       메인 페이지
                       <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
