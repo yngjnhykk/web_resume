@@ -15,7 +15,6 @@ import NNN_SERVIVE_VIEW1 from '../../assets/[NNN]service_view1.png';
 import NNN_SERVIVE_VIEW2 from '../../assets/[NNN]service_view2.png';
 import NNN_SERVIVE_VIEW3 from '../../assets/[NNN]service_view3.png';
 import NNN_trouble_shooting1 from '../../assets/[NNN]trouble_shooting1.png';
-// import NNN_trouble_shooting2 from '../../assets/[NNN]trouble_shooting2.png';
 import NNN_trouble_shooting3 from '../../assets/[NNN]trouble_shooting3.png';
 import Link from '../../assets/icon/Link';
 
@@ -59,9 +58,19 @@ function Profile({}: Props) {
               <li>
                 Skills
                 <ul style={{ listStyleType: 'circle', paddingLeft: '30px', fontWeight: '500' }}>
-                  <li>JavaScript, TypeScript HTML5, CSS3</li>
-                  <li>ReactJS, Redux, Redux-Saga, NextJS, Styled-Components</li>
-                  <li>Github, Vercel, Framer</li>
+                  <li className='underlineFront'>
+                    <span>JavaScript</span> <span>TypeScript</span>
+                    <span>HTML5</span> <span>CSS3</span>
+                  </li>
+                  <li className='underlineFront'>
+                    <span>ReactJS</span> <span>NextJS</span> <span>Redux</span> <span>Redux-Saga</span> <span>Styled-Components</span>
+                  </li>
+                  <li className='underlineBack'>
+                    <span>NodeJS</span> <span>ExpressJS</span> <span>MySQL</span> <span>Passport</span>
+                  </li>
+                  <li className='underlineTool'>
+                    <span>Github</span> <span>Vercel</span> <span>Framer</span>
+                  </li>
                 </ul>
               </li>
             </div>
@@ -438,6 +447,213 @@ function Profile({}: Props) {
             </Content>
           </WorkExperienceItem>
 
+          <WorkExperienceItem style={{ marginTop: '50px', paddingTop: '50px', borderTop: '1px solid rgba(0, 0, 0, 0.12)' }}>
+            <h3>
+              <span>NNN(Next + Node + sNs)</span>
+              <div>(2024.01 ~ 진행중)</div>
+            </h3>
+            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 Full Stack 프로젝트</div>
+            <div style={{ marginTop: '10px' }}>Next.js + Node.js 로 구현한 SNS 서비스</div>
+            <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
+              <a href='https://github.com/yngjnhykk/NNN' target='_blank'>
+                <Github />
+                Github
+              </a>
+            </TableValue>
+            <Content>
+              <ContentKey style={{ width: '30%', height: 2447 }}>
+                <ContentValue>
+                  <h4>사용 기술</h4>
+                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Frontend</span>
+
+                  <li style={{ fontWeight: '500' }}>
+                    Next
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>SSR 과 CSR 의 차이를 이해하며 적절한 페이지에 적용 가능</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Redux & Redux-Saga
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>Redux 로 전역 상태의 변화에 따른 컴포넌트 간 데이터 공유 및 조작이 가능</li>
+                      <li style={{ marginBottom: '5px' }}>
+                        Redux Saga 의 effcts 를 사용해 비동기 액션들의 흐름을 제어하고, 복잡한 비동기 작업을 모듈화해 코드의 가독성과 유지보수성을 높일 수 있음
+                      </li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Next-Redux-Wrapper
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>Next.js와 함께 Next-Redux-Wrapper를 사용하여 서버 사이드 렌더링 및 전역 상태 초기화 구현</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Styled Components
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>props 연동을 통해 조건부 스타일링 및 동적 스타일링이 가능</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Ant Design
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>쉬운 반응형 페이지와 기능에 집중하기 위해 ant-desogn 라이브러리 사용</li>
+                    </ul>
+                  </li>
+
+                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Backend</span>
+
+                  <li style={{ fontWeight: '500' }}>
+                    Express.js
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>RESTful API 구현</li>
+                      <li style={{ marginBottom: '5px' }}>데이터베이스 연동 및 CRUD 작업 처리</li>
+                      <li style={{ marginBottom: '5px' }}>Passport 와 함께 사용자 인증 및 권한 관리 구현</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    Sequelize(MySQL)
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>Sequelize를 통한 모델 정의 및 관계 설정</li>
+                    </ul>
+                  </li>
+                  <li style={{ fontWeight: '500' }}>
+                    <a target='_blank' href='https://yngjnhyk.tistory.com/412'>
+                      Passport & Passport-local
+                      <Link />
+                    </a>
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>Local strategy를 활용하여 사용자 정보를 데이터베이스에서 인증</li>
+                      <li style={{ marginBottom: '5px' }}>로그인 후에는 세션을 유지하고, 사용자 정보를 직렬화 및 역직렬화하여 유지</li>
+                      <li style={{ marginBottom: '5px' }}>보안을 위해 bcrypt 를 사용해 비밀번호 암호화 후 데이터베이스에 저장</li>
+                    </ul>
+                  </li>
+
+                  <li style={{ fontWeight: '500' }}>
+                    Multer
+                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
+                      <li style={{ marginBottom: '5px' }}>이미지 업로드를 위해 Multer 도입 및 설정</li>
+                      <li style={{ marginBottom: '5px' }}>업로드 시간으로 이미지 파일명의 중복을 방지</li>
+                    </ul>
+                  </li>
+                </ContentValue>
+                <ContentValue style={{ marginTop: 40 }}>
+                  <h4>수행 내용</h4>
+                  <li>
+                    메인 페이지
+                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                      <li>로그인 & 로그아웃</li>
+                      <li>게시글 작성</li>
+                      <li>댓글 작성</li>
+                      <li>이미지 업로드</li>
+                      <li>좋아요</li>
+                      <li>리트윗</li>
+                      <li>Infinite Scroll</li>
+                      <li>팔로우 & 언팔로우</li>
+                      <li>해시태그 검색</li>
+                    </ul>
+                  </li>
+                  <li>
+                    회원가입 페이지
+                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                      <li>회원가입</li>
+                    </ul>
+                  </li>
+                  <li>
+                    프로필 페이지
+                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
+                      <li>닉네임 수정</li>
+                      <li>팔로워 & 팔로잉 조회</li>
+                    </ul>
+                  </li>
+                </ContentValue>
+              </ContentKey>
+              <ContentValue style={{ width: '70%', height: 2447 }}>
+                <ContentValue>
+                  <h4>서비스 화면</h4>
+                  <img src={NNN_SERVIVE_VIEW1} style={{ width: '33%' }} />
+                  <img src={NNN_SERVIVE_VIEW2} style={{ width: '33%' }} />
+                  <img src={NNN_SERVIVE_VIEW3} style={{ width: '33%' }} />
+                </ContentValue>
+                <ContentValue style={{ marginTop: 30 }}>
+                  <h4>문제 해결 경험</h4>
+                  <div>
+                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>
+                      <a target='_blank' href='https://yngjnhyk.tistory.com/426'>
+                        SSR 환경에서 데이터 흐름
+                        <Link />
+                      </a>
+                    </span>
+                    <li style={{ marginTop: '10px' }}>
+                      고민: 유저정보가 담긴 쿠키를 GET 요청시 함께 보내기 위한 방법으로 백엔드에서 브라우저 session 에 담아 서버에서 쿠키를 받을 수 있었지만,
+                      SSR 을 구현하고 난 뒤, 쿠키를 전송하지 못하는 문제를 확인
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                        <li>
+                          해결 노력: 이전에 CORS 와 Credentials 에러를 백엔드에서 해결했었기에 SSR 을 구현한 프론트에서 문제가 있다고 판단하고, 확인해보니
+                          요청에 쿠키를 담지 못하고 있었던 것을 확인.
+                        </li>
+                        <ul style={{ listStyleType: 'none' }}>
+                          <li>서버사이드 렌더링의 주체는 브라우저에서 프론트, 백엔드가 아닌, 프론트에서 백엔드 서버로 데이터를 요청하는 것을 깨달음</li>
+                          <li>getServerSideProps 에서 데이터를 요청할 때, 쿠키를 조회해 axios headers 에 담아서 GET 요청</li>
+                        </ul>
+                        <li style={{ marginTop: '5px' }}>
+                          성과: SSR 환경에서의 데이터 흐름에 대한 이해를 바탕으로 SSR 환경에서도 서로 다른 도메인 간 쿠키 전송이 가능
+                        </li>
+                      </ul>
+                    </li>
+
+                    <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>Infinite Request</div>
+                    <li style={{ marginTop: '10px' }}>
+                      고민: lastId 를 통해 마지막으로 조회된 게시글의 id 보다 낮은 게시글을 모두 조회했지만, 여전히 트리거가 작동되어 계속되는 GET 요청으로
+                      끊임없이 게시글이 조회는 문제가 발생
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                        <li>
+                          해결 노력: 게시글 조회 요청을 관리하는 상태인 불리언 상태, hasMorePosts 를 만들어 불러온 게시글의 갯수가 10개 아니라면, 더 이상
+                          조회하지 않도록 트리거를 만듬
+                          <ul style={{ listStyleType: 'square', paddingLeft: 40 }}>
+                            <li>
+                              추가 고민: 하지만, 만약 게시글의 갯수가 10의 배수이고, 남은 갯수의 게시글이 10개라면, 마지막 게시글인줄 모르고, 조회를 요청하게
+                              되는데, 그렇다하더라도, 더 이상 불러올 데이터가 없기에 한 번의 데이터 요청 낭비가 발생하겠지만, 어떤 데이터도 더 이상 조회하지
+                              않아 에러를 막을 수 있었음
+                            </li>
+                          </ul>
+                        </li>
+                        <li>성과: 데이터 요청이 한 번 낭비되었지만, 적절한 트리거로 Infinite Scroll 구현</li>
+                      </ul>
+                    </li>
+                  </div>
+                </ContentValue>
+
+                <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>
+                  <a target='_blank' href='https://yngjnhyk.tistory.com/416'>
+                    Multer, 이미지 업로드
+                    <Link />
+                  </a>
+                </div>
+                <li style={{ marginTop: '10px' }}>
+                  고민: 게시글을 포스팅하는 과정에서 이미지와 텍스트를 서버로 함께 보내면서 시간이 오래 걸려 고민
+                  <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                    <li>
+                      해결 노력: 한 번에 보내는 것보다는 사용자가 게시글을 작성하는 동안 onChange 를 트리거로 해 업로드된 이미지부터 서버로 보내고, 프론트는
+                      다시 return 받아 이미지를 리사이징하면서 포스팅 시간을 줄여보기로 결정
+                    </li>
+                    <img src={NNN_trouble_shooting1} style={{ width: 800, marginTop: 10 }} />
+                    <ul style={{ listStyleType: 'square', paddingLeft: '40px', marginTop: -20 }}>
+                      <li style={{ marginTop: 0 }}>
+                        upload 객체 내용: 배포가 되지 않은 개발단계로 클라이언트로부터 전송된 이미지 파일을 컴퓨터 하드디스크에 저장하기 위해 uplods 파일을
+                        생성해 이미지를 저장하고, 파일명에 현재 시간을 추가해 파일명 중복을 방지
+                      </li>
+                    </ul>
+                    <li style={{ marginTop: '5px' }}>
+                      성과: 게시글의 이미지를 먼저 서버로 보내면서 유저가 게시글의 content 를 작성하는 과정에서 오래 걸리는 이미지를 우선 포스팅하고, 다시
+                      return 받아 이미지 주소를 알고 있는 프론트에서는 이미지 미리보기 기능이 가능하고, 미리 리사이징할 수 있으면서 포스팅 시간을 단축
+                    </li>
+                    <img src={NNN_trouble_shooting3} style={{ width: 720, marginLeft: 10 }} />
+                  </ul>
+                </li>
+              </ContentValue>
+            </Content>
+          </WorkExperienceItem>
+
           <WorkExperienceItem style={{ marginTop: '50px', borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
             <h3>
               <span>Nice Weather</span>
@@ -543,209 +759,6 @@ function Profile({}: Props) {
                       ReactNative 에서 환경변수를 간편하게 관리하기 위해 react-native-dotenv 와 react-native-config 를 고민중 프로젝트의 규모가 크지 않다는 점을
                       고려해 용량이 비교적 가벼운 react-native-dotenv 를 선택해서 API_KEY 보안 문제를 해결
                     </li>
-                  </ul>
-                </li>
-              </ContentValue>
-            </Content>
-          </WorkExperienceItem>
-
-          <WorkExperienceItem style={{ marginTop: '50px', paddingTop: '50px', borderTop: '1px solid rgba(0, 0, 0, 0.12)' }}>
-            <h3>
-              <span>NNN(Next + Node + sNs)</span>
-              <div>(2024.01 ~ 진행중)</div>
-            </h3>
-            <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 Full Stack 프로젝트</div>
-            <div style={{ marginTop: '10px' }}>Next.js + Node.js 로 구현한 SNS 서비스</div>
-            <TableValue style={{ marginTop: 10, border: 'none', marginBottom: 20 }}>
-              <a href='https://github.com/orgs/NodeNextsNs/repositories' target='_blank'>
-                <Github />
-                Github
-              </a>
-            </TableValue>
-            <Content>
-              <ContentKey style={{ width: '30%', height: 2447 }}>
-                <ContentValue>
-                  <h4>사용 기술</h4>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Frontend</span>
-
-                  <li style={{ fontWeight: '500' }}>
-                    Next
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>SSR 과 CSR 의 차이를 이해하며 적절한 페이지에 적용 가능</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    Redux & Redux-Saga
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>Redux 로 전역 상태의 변화에 따른 컴포넌트 간 데이터 공유 및 조작이 가능</li>
-                      <li style={{ marginBottom: '5px' }}>
-                        Redux Saga 의 effcts 를 사용해 비동기 액션들의 흐름을 제어하고, 복잡한 비동기 작업을 모듈화해 코드의 가독성과 유지보수성을 높일 수 있음
-                      </li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    Next-Redux-Wrapper
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>Next.js와 함께 Next-Redux-Wrapper를 사용하여 서버 사이드 렌더링 및 전역 상태 초기화 구현</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    Styled Components
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>props 연동을 통해 조건부 스타일링 및 동적 스타일링이 가능</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    Ant Design
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>쉬운 반응형 페이지와 기능에 집중하기 위해 ant-desogn 라이브러리 사용</li>
-                    </ul>
-                  </li>
-
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Backend</span>
-
-                  <li style={{ fontWeight: '500' }}>
-                    Express
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>RESTful API 구현</li>
-                      <li style={{ marginBottom: '5px' }}>데이터베이스 연동 및 CRUD 작업 처리</li>
-                      <li style={{ marginBottom: '5px' }}>Passport 와 함께 사용자 인증 및 권한 관리 구현</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    Sequelize(MySQL)
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>Sequelize를 통한 모델 정의 및 관계 설정</li>
-                    </ul>
-                  </li>
-                  <li style={{ fontWeight: '500' }}>
-                    <a target='_blank' href='https://yngjnhyk.tistory.com/412'>
-                      Passport & Passport-local
-                      <Link />
-                    </a>
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>Local strategy를 활용하여 사용자 정보를 데이터베이스에서 인증</li>
-                      <li style={{ marginBottom: '5px' }}>로그인 후에는 세션을 유지하고, 사용자 정보를 직렬화 및 역직렬화하여 유지</li>
-                      <li style={{ marginBottom: '5px' }}>보안을 위해 bcrypt 를 사용해 비밀번호 암호화 후 데이터베이스에 저장</li>
-                    </ul>
-                  </li>
-
-                  <li style={{ fontWeight: '500' }}>
-                    Multer
-                    <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
-                      <li style={{ marginBottom: '5px' }}>이미지 업로드를 위해 Multer 도입 및 설정</li>
-                      <li style={{ marginBottom: '5px' }}>업로드 시간으로 이미지 파일명의 중복을 방지</li>
-                    </ul>
-                  </li>
-                </ContentValue>
-                <ContentValue style={{ marginTop: 40 }}>
-                  <h4>수행 내용</h4>
-                  <li>
-                    메인 페이지
-                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                      <li>로그인 & 로그아웃</li>
-                      <li>게시글 작성</li>
-                      <li>댓글 작성</li>
-                      <li>이미지 업로드</li>
-                      <li>좋아요</li>
-                      <li>리트윗</li>
-                      <li>Infinite Scroll</li>
-                      <li>팔로우 & 언팔로우</li>
-                      <li>해시태그 검색</li>
-                    </ul>
-                  </li>
-                  <li>
-                    회원가입 페이지
-                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                      <li>회원가입</li>
-                    </ul>
-                  </li>
-                  <li>
-                    프로필 페이지
-                    <ul style={{ listStyleType: 'circle', marginLeft: 30 }}>
-                      <li>닉네임 수정</li>
-                      <li>팔로워 & 팔로잉 조회</li>
-                    </ul>
-                  </li>
-                </ContentValue>
-              </ContentKey>
-              <ContentValue style={{ width: '70%', height: 2447 }}>
-                <ContentValue>
-                  <h4>서비스 화면</h4>
-                  <img src={NNN_SERVIVE_VIEW1} style={{ width: '33%' }} />
-                  <img src={NNN_SERVIVE_VIEW2} style={{ width: '33%' }} />
-                  <img src={NNN_SERVIVE_VIEW3} style={{ width: '33%' }} />
-                </ContentValue>
-                <ContentValue style={{ marginTop: 30 }}>
-                  <h4>문제 해결 경험</h4>
-                  <div>
-                    <span style={{ fontWeight: 'bold', fontSize: '16px' }}>
-                      <a target='_blank' href='https://yngjnhyk.tistory.com/426'>
-                        SSR 환경에서 데이터 흐름
-                        <Link />
-                      </a>
-                    </span>
-                    <li style={{ marginTop: '10px' }}>
-                      고민: 유저정보가 담긴 쿠키를 GET 요청시 함께 보내기 위한 방법으로 백엔드에서 브라우저 session 에 담아 서버에서 쿠키를 받을 수 있었지만,
-                      SSR 을 구현하고 난 뒤, 쿠키를 전송하지 못하는 문제를 확인
-                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
-                        <li>
-                          해결 노력: 이전에 CORS 와 Credentials 에러를 백엔드에서 해결했었기에 SSR 을 구현한 프론트에서 문제가 있다고 판단하고, 확인해보니
-                          요청에 쿠키를 담지 못하고 있었던 것을 확인.
-                        </li>
-                        <ul style={{ listStyleType: 'none' }}>
-                          <li>서버사이드 렌더링의 주체는 브라우저에서 프론트, 백엔드가 아닌, 프론트에서 백엔드 서버로 데이터를 요청하는 것을 깨달음</li>
-                          <li>getServerSideProps 에서 데이터를 요청할 때, 쿠키를 조회해 axios headers 에 담아서 GET 요청</li>
-                        </ul>
-                        <li style={{ marginTop: '5px' }}>성과: SSR 환경에서의 데이터 흐름에 대한 이해와 SSR 환경에서도 서로 다른 도메인 간 쿠키 전송이 가능</li>
-                      </ul>
-                    </li>
-
-                    <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>Infinite Request</div>
-                    <li style={{ marginTop: '10px' }}>
-                      고민: lastId 를 통해 마지막으로 조회된 게시글의 id 보다 낮은 게시글을 모두 조회했지만, 여전히 트리거가 작동되어 계속되는 GET 요청으로
-                      끊임없이 게시글이 조회는 문제가 발생
-                      <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
-                        <li>
-                          해결 노력: 게시글 조회 요청을 관리하는 상태인 불리언 상태, hasMorePosts 를 만들어 불러온 게시글의 갯수가 10개 아니라면, 더 이상
-                          조회하지 않도록 트리거를 만듬
-                          {/* <img src={NNN_trouble_shooting2} style={{ width: 620 }} />
-                          <br /> */}
-                          하지만, 만약 게시글의 갯수가 10의 배수이고, 남은 갯수의 게시글이 10개라면, 마지막 게시글인줄 모르고, 조회를 요청하게 되는데,
-                          그렇다하더라도, 더 이상 불러올 데이터가 없기에 한 번의 데이터 요청 낭비가 발생하겠지만, 어떤 데이터도 더 이상 조회하지 않아 에러를
-                          막을 수 있었음
-                        </li>
-                        <li>성과: 데이터 요청이 한 번 낭비되었지만, 적절한 트리거로 Infinite Scroll 구현</li>
-                      </ul>
-                    </li>
-                  </div>
-                </ContentValue>
-
-                <div style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 20 }}>
-                  <a target='_blank' href='https://yngjnhyk.tistory.com/416'>
-                    게시글 포스팅 lazy loading
-                    <Link />
-                  </a>
-                </div>
-                <li style={{ marginTop: '10px' }}>
-                  고민: 게시글을 포스팅하는 과정에서 이미지와 텍스트를 서버로 함께 보내면서 시간이 오래 걸려 고민
-                  <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
-                    <li>
-                      해결 노력: 한 번에 보내는 것보다는 사용자가 게시글을 작성하는 동안 onChange 를 트리거로 해 업로드된 이미지부터 서버로 보내고, 프론트는
-                      다시 return 받아 이미지를 리사이징하면서 포스팅 시간을 줄여보기로 결정
-                    </li>
-                    <img src={NNN_trouble_shooting1} style={{ width: 800, marginTop: 10 }} />
-                    <ul style={{ listStyleType: 'square', paddingLeft: '40px', marginTop: -20 }}>
-                      <li style={{ marginTop: 0 }}>
-                        upload 객체 내용: 배포가 되지 않은 개발단계로 클라이언트로부터 전송된 이미지 파일을 컴퓨터 하드디스크에 저장하기 위해 uplods 파일을
-                        생성해 이미지를 저장하고, 파일명에 현재 시간을 추가해 파일명 중복을 방지
-                      </li>
-                    </ul>
-                    <li style={{ marginTop: '5px' }}>
-                      성과: 게시글의 이미지를 먼저 서버로 보내면서 유저가 게시글의 content 를 작성하는 과정에서 오래 걸리는 이미지를 우선 포스팅하고, 다시
-                      return 받아 이미지 주소를 알고 있는 프론트에서는 이미지 미리보기 기능이 가능하고, 미리 리사이징할 수 있으면서 포스팅 시간을 단축
-                    </li>
-                    <img src={NNN_trouble_shooting3} style={{ width: 720, marginLeft: 10 }} />
                   </ul>
                 </li>
               </ContentValue>
@@ -871,23 +884,56 @@ const TitleContent = styled.div`
     text-rendering: optimizeLegibility;
     font-size: 28px;
   }
+
+  .underlineFront {
+    span {
+      position: relative;
+    }
+
+    span:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: #a9e2f3;
+      z-index: -1;
+    }
+  }
+  .underlineBack {
+    span {
+      position: relative;
+    }
+
+    span:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: #a9f5bc;
+      z-index: -1;
+    }
+  }
+  .underlineTool {
+    span {
+      position: relative;
+    }
+
+    span:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: #feb7b4;
+      z-index: -1;
+    }
+  }
 `;
-
-// const PersonalLinks = styled.div`
-//   margin-bottom: 20px;
-//   font-size: 14px;
-//   a {
-//     font: 100%/1.625 -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-//       'Segoe UI Symbol';
-//     -webkit-text-size-adjust: 100%;
-//     opacity: 0.5;
-//     color: #0687f0;
-//     text-decoration: none;
-//     box-shadow: none;
-//   }
-// `;
-
-//  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
 
 const WorkExperience = styled.div`
   border-bottom: 1px solid black;
