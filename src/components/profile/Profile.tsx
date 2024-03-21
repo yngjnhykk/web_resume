@@ -4,16 +4,15 @@ import Notion from '../../assets/icon/Notion';
 import LowesPrice from '../../assets/icon/LowesPrice';
 import Tistory from '../../assets/icon/Tistory';
 import profileImage from '../../assets/profileImage.jpg';
-import serviceview from '../../assets/service_view.png';
+import architecture1 from '../../assets/architecture1.png';
+import architecture2 from '../../assets/architecture2.png';
 import carouselCode from '../../assets/carousel_code.png';
 import infiniteScroll from '../../assets/infiniteScroll.png';
 import WeatherAPP1 from '../../assets/WeatherAPP1.png';
 import WeatherAPP2 from '../../assets/WeatherAPP2.png';
 import WeatherAPP3 from '../../assets/WeatherAPP3.png';
 import WeatherAPP4 from '../../assets/WeatherAPP4.png';
-import NNN_SERVIVE_VIEW1 from '../../assets/[NNN]service_view1.png';
-import NNN_SERVIVE_VIEW2 from '../../assets/[NNN]service_view2.png';
-import NNN_SERVIVE_VIEW3 from '../../assets/[NNN]service_view3.png';
+
 import NNN_trouble_shooting1 from '../../assets/[NNN]trouble_shooting1.png';
 import NNN_trouble_shooting3 from '../../assets/[NNN]trouble_shooting3.png';
 import Link from '../../assets/icon/Link';
@@ -59,7 +58,7 @@ function Profile({}: Props) {
                 Skills
                 <ul style={{ listStyleType: 'circle', paddingLeft: '30px', fontWeight: '500' }}>
                   <li className='underlineFront'>
-                    <span>JavaScript</span> <span>TypeScript</span>
+                    <span style={{ background: 'linear-gradient(to top, #a9e2f3 40%, transparent 40%)' }}>JavaScript</span> <span>TypeScript</span>
                     <span>HTML5</span> <span>CSS3</span>
                   </li>
                   <li className='underlineFront'>
@@ -81,7 +80,7 @@ function Profile({}: Props) {
           <span>Projects Experience</span>
         </h2>
         <WorkExperience>
-          <WorkExperienceItem>
+          <WorkExperienceItem style={{ borderBottom: '1px solid hsla(0, 0%, 0%, 0.12)' }}>
             <h3>
               <span>내일은 최저가</span>
               <div>(2023.10 ~ 2023.11)</div>
@@ -110,7 +109,7 @@ function Profile({}: Props) {
               </a>
             </TableValue>
             <Content style={{ gap: '30px' }}>
-              <ContentKey style={{ height: 2750, width: '30%' }}>
+              <ContentKey style={{ height: 3037, width: '30%' }}>
                 <Content style={{ marginTop: 0 }}>
                   <ContentValue>
                     <h4>사용 기술</h4>
@@ -249,8 +248,8 @@ function Profile({}: Props) {
               </ContentKey>
               <ContentValue style={{ width: '70%' }}>
                 <ContentValue>
-                  <h4>서비스 화면</h4>
-                  <img style={{ height: '280px', width: '780px' }} src={serviceview}></img>
+                  <h4>아키텍처</h4>
+                  <img style={{ width: '100%' }} src={architecture1}></img>
                 </ContentValue>
 
                 <Content style={{ marginTop: '30px' }}>
@@ -449,7 +448,7 @@ function Profile({}: Props) {
             </Content>
           </WorkExperienceItem>
 
-          <WorkExperienceItem style={{ marginTop: '50px', paddingTop: '50px', borderTop: '1px solid rgba(0, 0, 0, 0.12)' }}>
+          <WorkExperienceItem style={{ marginTop: 50, paddingTop: '50px', borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}>
             <h3>
               <span>NNN(Next + Node + sNs)</span>
               <div>(2024.01 ~ 진행중)</div>
@@ -571,10 +570,8 @@ function Profile({}: Props) {
               </ContentKey>
               <ContentValue style={{ width: '70%', height: 2447 }}>
                 <ContentValue>
-                  <h4>서비스 화면</h4>
-                  <img src={NNN_SERVIVE_VIEW1} style={{ width: '33%' }} />
-                  <img src={NNN_SERVIVE_VIEW2} style={{ width: '33%' }} />
-                  <img src={NNN_SERVIVE_VIEW3} style={{ width: '33%' }} />
+                  <h4>아키텍처</h4>
+                  <img src={architecture2} style={{ width: '100%' }} />
                 </ContentValue>
                 <ContentValue style={{ marginTop: 30 }}>
                   <h4>문제 해결 경험</h4>
@@ -656,7 +653,7 @@ function Profile({}: Props) {
             </Content>
           </WorkExperienceItem>
 
-          <WorkExperienceItem style={{ marginTop: '50px', borderTop: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
+          <WorkExperienceItem style={{ marginTop: '200px', borderBottom: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
             <h3>
               <span>Nice Weather</span>
               <div>(2023.12 ~ 진행중)</div>
@@ -676,7 +673,7 @@ function Profile({}: Props) {
             </TableValue>
 
             <Content>
-              <ContentKey style={{ width: '30%', height: 1179 }}>
+              <ContentKey style={{ width: '30%', height: 1213 }}>
                 <ContentValue>
                   <h4>사용 기술</h4>
                   <li style={{ fontWeight: '500' }}>
@@ -713,10 +710,10 @@ function Profile({}: Props) {
               <ContentValue style={{ width: '70%' }}>
                 <ContentValue>
                   <h4>서비스 화면</h4>
-                  <img src={WeatherAPP1} style={{ height: '360px' }} />
-                  <img src={WeatherAPP2} style={{ height: '360px' }} />
-                  <img src={WeatherAPP3} style={{ height: '360px' }} />
-                  <img src={WeatherAPP4} style={{ height: '360px' }} />
+                  <img src={WeatherAPP1} style={{ width: '25%' }} />
+                  <img src={WeatherAPP2} style={{ width: '25%' }} />
+                  <img src={WeatherAPP3} style={{ width: '25%' }} />
+                  <img src={WeatherAPP4} style={{ width: '25%' }} />
                 </ContentValue>
                 <ContentValue style={{ marginTop: 30 }}>
                   <h4>수행 내용</h4>
@@ -889,50 +886,17 @@ const TitleContent = styled.div`
 
   .underlineFront {
     span {
-      position: relative;
-    }
-
-    span:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40%;
-      background-color: #a9e2f3;
-      z-index: -1;
+      background: linear-gradient(to top, #a9e2f3 40%, transparent 40%);
     }
   }
   .underlineBack {
     span {
-      position: relative;
-    }
-
-    span:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40%;
-      background-color: #a9f5bc;
-      z-index: -1;
+      background: linear-gradient(to top, #a9f5bc 40%, transparent 40%);
     }
   }
   .underlineTool {
     span {
-      position: relative;
-    }
-
-    span:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40%;
-      background-color: #feb7b4;
-      z-index: -1;
+      background: linear-gradient(to top, #feb7b4 40%, transparent 40%);
     }
   }
 `;
