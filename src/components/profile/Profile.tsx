@@ -64,6 +64,9 @@ function Profile({}: Props) {
                   <li className='underlineFront'>
                     <span>ReactJS</span> <span>NextJS</span> <span>Redux</span> <span>Redux-Saga</span> <span>Styled-Components</span>
                   </li>
+                  <li className='underlineFront'>
+                    <span>React Native</span> <span>Expo</span>
+                  </li>
                   <li className='underlineBack'>
                     <span>NodeJS</span> <span>ExpressJS</span> <span>MySQL</span> <span>Passport</span>
                   </li>
@@ -82,7 +85,12 @@ function Profile({}: Props) {
         <WorkExperience>
           <WorkExperienceItem style={{ borderBottom: '1px solid hsla(0, 0%, 0%, 0.12)' }}>
             <h3>
-              <span>내일은 최저가</span>
+              <span>
+                내일은 최저가
+                <span style={{ marginLeft: 20, fontSize: 15, fontWeight: '500', background: 'linear-gradient(to top, #a9e2f3 40%, transparent 40%)' }}>
+                  ReactJS
+                </span>
+              </span>
               <div>(2023.10 ~ 2023.11)</div>
             </h3>
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>항해99 실전프로젝트 (FE2, BE4, DE1) / 팀 리더</div>
@@ -450,7 +458,15 @@ function Profile({}: Props) {
 
           <WorkExperienceItem style={{ marginTop: 50, paddingTop: '50px', borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}>
             <h3>
-              <span>NNN(Next + Node + sNs)</span>
+              <span>
+                NNN(Next + Node + sNs){' '}
+                <span style={{ marginLeft: 20, fontSize: 15, fontWeight: '500', background: 'linear-gradient(to top, #a9e2f3 40%, transparent 40%)' }}>
+                  NextJS
+                </span>
+                <span style={{ marginLeft: 10, fontSize: 15, fontWeight: '500', background: 'linear-gradient(to top, #a9f5bc 40%, transparent 40%)' }}>
+                  NodeJS
+                </span>
+              </span>
               <div>(2024.01 ~ 진행중)</div>
             </h3>
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 Full Stack 프로젝트</div>
@@ -655,7 +671,12 @@ function Profile({}: Props) {
 
           <WorkExperienceItem style={{ marginTop: '200px', borderBottom: '1px solid hsla(0, 0%, 0%, 0.12)', paddingTop: '30px' }}>
             <h3>
-              <span>Nice Weather</span>
+              <span>
+                Nice Weather
+                <span style={{ marginLeft: 20, fontSize: 15, fontWeight: '500', background: 'linear-gradient(to top, #a9e2f3 40%, transparent 40%)' }}>
+                  React Native
+                </span>
+              </span>
               <div>(2023.12 ~ 진행중)</div>
             </h3>
             <div style={{ color: '#878e98', fontWeight: '500', fontSize: '15px' }}>1인 React Native 프로젝트</div>
