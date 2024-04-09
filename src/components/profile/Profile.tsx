@@ -468,7 +468,7 @@ function Profile({}: Props) {
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>Frontend</span>
 
                   <li style={{ fontWeight: '500' }}>
-                    Next
+                    NextJS
                     <ul style={{ listStyleType: 'circle', paddingLeft: '30px' }}>
                       <li style={{ marginBottom: '5px' }}>SSR 과 CSR 의 차이를 이해하며 적절한 페이지에 적용 가능</li>
                     </ul>
